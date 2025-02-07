@@ -8,7 +8,7 @@ Visit our project website [here](https://github.com/423S25/project5) for full us
 
 Developer documentation can be found here: ( ).
 
-#Contribution
+# Contribution
 
 To contribute to this project:
 
@@ -25,16 +25,16 @@ Full Developer documentation can be found here: (https://github.com/423S25/proje
 
 # Maintainers
 
-[Talia Clarke] (https://github.com/taliaiclarke)
+[Talia Clarke](https://github.com/taliaiclarke)
 
-[Sierrah Paul] (https://github.com/SierrahPaul)
+[Sierrah Paul](https://github.com/SierrahPaul)
 
-[Ryan Plusch] (https://github.com/Pluschious)
+[Ryan Plusch](https://github.com/Pluschious)
 
-[Mark Kwapisz] (https://github.com/Markwapisz)
+[Mark Kwapisz](https://github.com/Markwapisz)
 
-[Henr Weston] (https://github.com/henrywatson11)
+[Henr Weston](https://github.com/henrywatson11)
 
 # Designer
 
-[Kira Hopkins] (https://github.com/KiraHopkins)
+[Kira Hopkins](https://github.com/KiraHopkins)
