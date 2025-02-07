@@ -21,7 +21,7 @@ To contribute to this project:
 7. tag someone for a review (probably not necessary for smaller changes)
 8. once someone approves, merge it
 
-Full Developer documentation can be found here: (https://github.com/423S25/project5).
+Full Developer documentation can be found [here](https://github.com/423S25/project5).
 
 # Maintainers
 
