@@ -2,7 +2,7 @@
 Project for ESOF 432 - an Intranet system for the HRDC
 
 # User Documentation
-Visit our project website (https://github.com/423S25/project5) for full user documentation
+Visit our project website [here](https://github.com/423S25/project5) for full user documentation
 
 # Developer Documentation
 
@@ -22,3 +22,14 @@ To contribute to this project:
 8. once someone approves, merge it
 
 Full Developer documentation can be found here: (https://github.com/423S25/project5).
+
+# Maintainers
+
+[Talia Clarke] (https://github.com/taliaiclarke)
+[Kira Hopkins] (https://github.com/KiraHopkins)
+[Sierrah Paul] (https://github.com/SierrahPaul)
+[Ryan Plusch] (https://github.com/Pluschious)
+[Mark Kwapisz] (https://github.com/Markwapisz)
+[Henr Weston] (https://github.com/henrywatson11)
+# Designer
+[Kira Hopkins] (https://github.com/KiraHopkins)
