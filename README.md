@@ -33,7 +33,7 @@ Full Developer documentation can be found [here](https://423s25.github.io/projec
 
 [Mark Kwapisz](https://github.com/Markwapisz)
 
-[Henr Weston](https://github.com/henrywatson11)
+[Henry Weston](https://github.com/henrywatson11)
 
 # Designer
 
