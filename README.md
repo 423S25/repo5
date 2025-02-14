@@ -4,7 +4,7 @@ Project for ESOF 432 - an Intranet system for the HRDC
 # User Documentation
 Visit our project website [here](https://423s25.github.io/project5/) for full user documentation
 
-# Developer Documentation
+# Developer Documentation 
 
 Developer documentation can be found here: ( ).
 
