@@ -25,7 +25,7 @@ Full Developer documentation can be found [here](https://423s25.github.io/projec
 
 # Maintainers
 
-[Talia Clarke] GitHub:(https://github.com/taliaiclarke)
+[Talia Clarke](https://github.com/taliaiclarke)
 
 [Sierrah Paul](https://github.com/SierrahPaul)
 
