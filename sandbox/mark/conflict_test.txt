@@ -1,1 +1,1 @@
-Change from branch-b
+Change from both branch-a and branch-b
