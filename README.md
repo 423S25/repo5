@@ -76,4 +76,4 @@ Full Developer documentation can be found [here](https://423s25.github.io/repo5/
 # Designer
 
 [Kira Hopkins](https://github.com/KiraHopkins)
->>>>>>> origin/main
+
