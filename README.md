@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Group 5 Staff Intranet Website using NextJS
 
+<<<<<<< HEAD
 http://153.90.6.210:3000/
 
 
@@ -80,3 +80,8 @@ Full Developer documentation can be found [here](https://423s25.github.io/repo5/
 
 [Kira Hopkins](https://github.com/KiraHopkins)
 
+=======
+Group Members:  Talia, Ryley, Sierrah, Mark, Henry, and Ryan
+
+Github: https://github.com/ryleysanden
+>>>>>>> ryley-practice
