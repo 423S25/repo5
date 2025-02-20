@@ -43,7 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Project for ESOF 432 - an Intranet system for the HRDC
 
 # User Documentation
-Visit our project website [here](https://423s25.github.io/repo5/) for full user documentation
+Visit our project website [here](https://423s25.github.io/repo5/) or, for full user documentation [here](https://github.com/423S25/repo5/blob/main/UserDocumentation)
 
 # Developer Documentation 
 
