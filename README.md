@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Group 5 Staff Intranet Website using NextJS
 
 
@@ -41,3 +42,17 @@ Full Developer documentation can be found [here](https://423s25.github.io/repo5/
 # Designer
 
 [Kira Hopkins](https://github.com/KiraHopkins)
+=======
+This is the README for the navbar branch. 
+
+As of now 2/21/2025 this is the current working project branch for Group 5's HRDC project. 
+
+Group Members: 
+Talia Clark
+Kira Hopkins
+Mark Kwapisz
+Sierrah Paul
+Ryan Plusch
+Ryley Sanden
+Henry Weston
+>>>>>>> d2feeff (Update README.md to remove NextJS included stuff)
