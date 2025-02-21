@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { NavBar } from "./components/Navbar";
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
       <h1 className="font-bold text-6xl">ESOF 423: Group 5</h1> 
@@ -14,5 +16,8 @@ export default function Home() {
         </ol>
       </main>
     </div>
+=======
+    <NavBar/ >
+>>>>>>> 18b7746 (Initial implimentation of site with a navbar)
   );
 }
