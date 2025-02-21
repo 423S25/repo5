@@ -79,9 +79,3 @@ Full Developer documentation can be found [here](https://423s25.github.io/repo5/
 # Designer
 
 [Kira Hopkins](https://github.com/KiraHopkins)
-
-=======
-Group Members:  Talia, Ryley, Sierrah, Mark, Henry, and Ryan
-
-Github: https://github.com/ryleysanden
->>>>>>> ryley-practice
