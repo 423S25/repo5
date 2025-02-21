@@ -1,4 +1,4 @@
-//Current Home page, made with basic Next.JS framework found at: https://nextjs.org/docs/app/getting-started/installation
+import Image from "next/image";
 
 export default function Home() {
   return (
