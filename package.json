@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "group5",
-=======
-  "name": "navbar",
->>>>>>> 5cb4246 (Initial commit from Create Next App)
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,11 +11,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "next": "15.1.6"
-=======
-    "next": "15.1.7"
->>>>>>> 5cb4246 (Initial commit from Create Next App)
   },
   "devDependencies": {
     "typescript": "^5",
@@ -29,11 +21,7 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "eslint": "^9",
-<<<<<<< HEAD
     "eslint-config-next": "15.1.6",
-=======
-    "eslint-config-next": "15.1.7",
->>>>>>> 5cb4246 (Initial commit from Create Next App)
     "@eslint/eslintrc": "^3"
   }
 }

@@ -4,22 +4,13 @@
 
 :root {
   --background: #ffffff;
-<<<<<<< HEAD
   --foreground: #1684a5;
-=======
-  --foreground: #171717;
->>>>>>> 5cb4246 (Initial commit from Create Next App)
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-<<<<<<< HEAD
     --background: #ffffff;
     --foreground: #1684a5;
-=======
-    --background: #0a0a0a;
-    --foreground: #ededed;
->>>>>>> 5cb4246 (Initial commit from Create Next App)
   }
 }
 
