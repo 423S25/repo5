@@ -1,7 +1,5 @@
 Group 5 Staff Intranet Website using NextJS
 
-<<<<<<< HEAD
-http://153.90.6.210:3000/
 
 # group5
 Project for ESOF 432 - an Intranet system for the HRDC
