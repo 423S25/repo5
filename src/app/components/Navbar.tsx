@@ -18,8 +18,8 @@ export const NavBar = () => {
                     <Link href ="/staff" className="mx-2 hover:text-gray-300">
                         Staff
                     </Link>
-                    <Link href ="/resources" className="mx-2 hover:text-gray-300">
-                        Resources
+                    <Link href ="/help" className="mx-2 hover:text-gray-300">
+                        Help
                     </Link>
                 
                 </div>
