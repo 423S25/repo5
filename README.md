@@ -2,11 +2,11 @@
 Project for ESOF 432 - an Intranet system for the HRDC
 
 # User Documentation
-Visit our project website [here](https://423s25.github.io/project5/) for full user documentation
+Visit our project website [here](https://423s25.github.io/repo5/) for full user documentation
 
 # Developer Documentation 
 
-Developer documentation can be found here: ( ).
+Developer documentation can be found [here](./DeveloperDocs).
 
 # Contribution
 
@@ -21,7 +21,7 @@ To contribute to this project:
 7. tag someone for a review (probably not necessary for smaller changes)
 8. once someone approves, merge it
 
-Full Developer documentation can be found [here](https://423s25.github.io/project5/).
+Full Developer documentation can be found [here](./DeveloperDocs).
 
 # Maintainers
 
