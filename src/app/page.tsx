@@ -1,8 +1,10 @@
-import Image from "next/image";
 import { NavBar } from "./components/Navbar";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <NavBar/ >
+    <div>
+      <NavBar />
+      <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
+    </div>
   );
 }
