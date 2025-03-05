@@ -11,7 +11,7 @@ The full <strong>User Documentation</strong> can be found <a href="./UserDocumen
 # Developer Documentation 
 
 The full <strong>Developer Documentation</strong> can be found <a href="./DeveloperDocs" target="_blank">here</a>.
-=======
+
 Visit our project website [here](https://423s25.github.io/repo5/) for full user documentation
 
 # User Documentation
