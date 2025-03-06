@@ -23,6 +23,9 @@ export const NavBar = () => {
                     <Link href="/help" className="mx-2 hover:text-gray-300">
                         Help
                     </Link>
+                    <Link href="/links" className="mx-2 hover:text-gray-300">
+                        Links
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -53,6 +56,9 @@ export const NavBar = () => {
                     </Link>
                     <Link href="/help" className="block py-2 hover:text-gray-300">
                         Help
+                    </Link>
+                    <Link href="/links" className="block py-2 hover:text-gray-300">
+                        Link
                     </Link>
                 </div>
             )}
