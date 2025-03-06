@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [searchText, setSearchText] = useState("");
 
     return (
         <nav className="bg-gray-800 text-white p-4 sm:p-6 md:flex md:justify-between md:items-center">
@@ -13,7 +14,7 @@ export const NavBar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex">
+                <div className="hidden md:flex items-center"> {/* Wrapped with items-center for alignment */}
                     <Link href="/" className="mx-2 hover:text-gray-300">
                         Home
                     </Link>
@@ -26,6 +27,19 @@ export const NavBar = () => {
                     <Link href="/links" className="mx-2 hover:text-gray-300">
                         Links
                     </Link>
+
+                    {/* Search Bar - No Icon */}
+                    <div className="ml-4 flex items-center bg-white px-2 py-1 rounded">
+                        <input 
+                            type="text" 
+                            placeholder="Search..." 
+                            className="text-black outline-none"
+                            onChange={(e) => {
+                                setSearchText(e.target.value);
+                                console.log(e.target.value);
+                            }}
+                        />
+                    </div>
                 </div>
 
                 {/* Mobile Menu Button */}
