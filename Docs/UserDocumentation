@@ -1,4 +1,4 @@
-User Documentation
+User Documentation:
 
 This product will allow HRDC administrators, workers, and volunteer users to find specific HRDC forms, to see company announcements or other important information from leadership. This website will be purposely designed to allow those with little computer literacy to easily use and navigate the website and get the information they need so that the HRDC admin doesn’t have to heavily assist employees/volunteers in finding forms they need to fill out.
 This intranet will be connected to the HRDC website through a subdomain.
@@ -7,7 +7,7 @@ The software will be a simple and user-friendly way to access important links to
 Users should alert their supervisor of any bugs or issues that may appear while using the software. This can be done through an email or verbal communication. As developers, we will have an error backlog for any future developers for maintenance purposes.
 
 
-Quick Start Guide
+Quick Start Guide:
 
 To start using the HRDC intranet quickly:
 
