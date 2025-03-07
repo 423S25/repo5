@@ -14,14 +14,6 @@ The full <strong>Developer Documentation</strong> can be found <a href="./Develo
 
 Visit our project website [here](https://423s25.github.io/repo5/) for full user documentation
 
-# User Documentation
-User documentation can be found [here](./UserDocumentation).
-
-# Developer Documentation 
-
-Developer documentation can be found [here](./DeveloperDocs).
-
-
 # Contribution
 
 To contribute to this project:
