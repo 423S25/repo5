@@ -22,9 +22,13 @@ export default function HelpPage() {
     faq.question.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
-    <div className="container mx-auto p-6">
-      <NavBar />
+  //return (
+    //<div className="container mx-auto p-6">
+      //<NavBar />
+    return (
+    <>
+      <NavBar /> 
+      <div className="container mx-auto p-6">
 
       <div className="bg-white shadow-md p-6 rounded-lg">
         <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">Help & Support</h1>
