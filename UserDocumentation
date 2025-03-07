@@ -6,7 +6,6 @@ Users will need to access this intranet through the subdomain.
 The software will be a simple and user-friendly way to access important links to different forms and software used within HRDC along with view announcements. Users can search for these links or click on frequently used links at the top of the webpage. Supervisors will have access to admin features that allow features, such as updating the announcements and adding or removing links.
 Users should alert their supervisor of any bugs or issues that may appear while using the software. This can be done through an email or verbal communication. As developers, we will have an error backlog for any future developers for maintenance purposes.
 
-
 Quick Start Guide
 
 To start using the HRDC intranet quickly:
@@ -15,6 +14,11 @@ To start using the HRDC intranet quickly:
 2. Type the HRDC intranet address provided by your supervisor.
 3. On the main page, use the search bar to find forms, or click on common links at the top.
 4. Check the announcements regularly for important updates from supervisors.
+
+Currently Working Aspects
+1. All Links on the Important Links Page work and take you to the correct page.
+2. Help Page's search function works along with all drop downs and email link.
+3. All pages are connected to each other.
 
 How to Report Issues
 
