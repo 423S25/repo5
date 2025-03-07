@@ -37,6 +37,7 @@ export const NavBar = () => {
                             onChange={(e) => {
                                 setSearchText(e.target.value);
                                 console.log(e.target.value);
+                                console.log(searchText)
                             }}
                         />
                     </div>
