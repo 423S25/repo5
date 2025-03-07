@@ -49,11 +49,4 @@ Full Developer documentation can be found [here](./DeveloperDocs).
 
 [Kira Hopkins](https://github.com/KiraHopkins)
 
-Group Members: 
-Talia Clark
-Kira Hopkins
-Mark Kwapisz
-Sierrah Paul
-Ryan Plusch
-Ryley Sanden
-Henry Weston
+
