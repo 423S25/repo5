@@ -2,7 +2,7 @@
 Project for ESOF 432 - an Intranet system for the HRDC
 
 
-Visit our project website [here](https://423s25.github.io/repo5/)
+Visit our project website [here](https://repo5-rho.vercel.app/)
 
 # User Documentation
 
