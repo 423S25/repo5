@@ -1,30 +1,32 @@
 Developer Documentation
 
 
-How to obtain source code
+How to obtain source code:
 The source code is accessible through the Github project account. The source code can also be found in the final project hosted on the web. 
 
-Planned Directory Structure
+Planned Directory Structure:
 We are making a two-level directory structure. This is due to its ability to separate directories for each user. 
 
-How to Build
+How to Build:
 The initial building block for this website is Next.js. Additional files will be added to implement future features.
 
-How to Test
+How to Test:
 We will be doing black box testing specifically focusing on users who are in our target market, elderly and non technical users. 
 
-Automated Build and Test 
+Automated Build and Test:
 There is no automated building and testing implemented currently but will be implemented as needed.
 
-How to release a version 
+How to release a version :
 Each new version will be released on GitHib.
 
-Bug tracker (See Issues in GitHub)
+Bug tracker:
 Bugs will be tracked in a page called Issues located in GitHub.
+Link to Issues Page: https://github.com/423S25/repo5/issues
 
-GOOD comments should be found in any source code
+GOOD comments should be found in any source code!
 We will use good commenting practices to make our code understandable to current and future users.
 
+Our Commenting Practices: 
 Rule 1: Comments should not duplicate the code.
 
 Rule 2: Good comments do not excuse unclear code.
