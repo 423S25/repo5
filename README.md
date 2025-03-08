@@ -28,8 +28,6 @@ To contribute to this project:
 8. once someone approves, merge it
 
 
-Full Developer documentation can be found [here](./DeveloperDocs).
-
 
 # Maintainers
 
