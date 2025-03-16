@@ -28,7 +28,8 @@ const allData = [
 export default function SearchPage() {
     const searchParams = useSearchParams();
     const query = searchParams.get("query") || "";
-    const [filteredResults, setFilteredResults] = useState([]);
+    const [filteredResults, setFilteredResults] = useState<{ title: string; content: string }[]>([]);
+
 
     useEffect(() => {
         const results = allData.filter(item =>
