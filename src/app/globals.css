@@ -19,3 +19,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --navbar-bg: #336F77; 
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+}
+
+.navbar img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}

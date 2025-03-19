@@ -17,9 +17,18 @@ export const NavBar = () => {
     };
 
     return (
-        <nav className="bg-gray-800 text-white p-4 sm:p-6 md:flex md:justify-between md:items-center">
+       // <nav className="bg-gray-800 text-white p-4 sm:p-6 md:flex md:justify-between md:items-center">
+        <nav className="navbar text-white p-4 sm:p-6 md:flex md:justify-between md:items-center">
+
             <div className="container mx-auto flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold">Group 5</Link>
+              
+               <Link href="/" className="flex items-center">
+                 <img src="/logo.png" alt="HRDC Logo" className="h-10 w-auto mr-3" />
+                 <span className="text-2xl font-bold">HRDC Intranet</span>
+                </Link>
+
+
+
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center">
