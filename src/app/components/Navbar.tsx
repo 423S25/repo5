@@ -1,12 +1,21 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation"; //  Iimport router for navigation - search
+import { auth } from '../config/firebase';
 
 export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchText, setSearchText] = useState("");  
     const router = useRouter(); // Enables page redirection - search
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            setIsLoggedIn(!!user);
+        });
+        return () => unsubscribe();
+    }, []);
 
     //  Handles search and redirects to /search?query=yourtext
     const handleSearch = (e: React.FormEvent) => {
@@ -36,6 +45,12 @@ export const NavBar = () => {
                     <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
                     <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
                     <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
+                    <Link 
+                        href="/admin/announcements" 
+                        className="mx-2 bg-green-600 px-4 py-2 rounded-md hover:bg-green-700"
+                    >
+                        Manage Announcements
+                    </Link>
 
                     {/* Search Form */}
                     <form onSubmit={handleSearch} className="ml-4 flex items-center bg-white px-2 py-1 rounded">
@@ -74,6 +89,12 @@ export const NavBar = () => {
                     <Link href="/staff" className="block py-2 hover:text-gray-300">Staff</Link>
                     <Link href="/help" className="block py-2 hover:text-gray-300">Help</Link>
                     <Link href="/links" className="block py-2 hover:text-gray-300">Links</Link>
+                    <Link 
+                        href="/admin/announcements" 
+                        className="block py-2 px-4 my-2 bg-green-600 rounded-md hover:bg-green-700"
+                    >
+                        Manage Announcements
+                    </Link>
 
                     {/*  Search Form in Mobile Menu */}
                     <form onSubmit={handleSearch} className="mt-4 flex items-center bg-white px-2 py-1 rounded">
