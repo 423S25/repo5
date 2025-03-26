@@ -1,9 +1,26 @@
 import { NavBar } from "./components/Navbar";
 import { getAnnouncements } from "./utils/getannouncements";
 import { Announcement } from "./types/announcement";
+import config from "./config";
+require('dotenv').config();
+
+const api_token = process.env.API_TOKEN;
+
+const fetchAnnouncements = async () => {
+  const reqOptions = {
+    headers: {
+      Authorization: 'Bearer ${api_token}'
+    }
+  };
+  const request = await fetch('${config.api}/api/announcements?populate=*', reqOptions);
+  const response = await request.json();
+
+  return response;
+}
 
 export default async function HomePage() {
   const announcements = await getAnnouncements();
+  const announcement = await fetchAnnouncements();
 
   return (
     <div>

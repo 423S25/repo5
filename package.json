@@ -13,8 +13,9 @@
     "@builder.io/react": "^8.0.9",
     "@builder.io/sdk": "^6.0.4",
     "@firebase/firestore": "^4.7.10",
+    "dotenv": "^16.4.7",
     "firebase": "^11.5.0",
-    "next": "15.1.7",
+    "next": "^15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
