@@ -1,14 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { auth } from "@/firebaseConfig";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useRouter } from "next/navigation";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+import { auth, firebaseConfig } from "@/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import { NavBar } from "../components/Navbar";
+import { getApp, getApps, initializeApp } from "firebase/app";
 
 
-const db = getFirestore();
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export default function AnnouncementsPage() {
   const [user, setUser] = useState<any>(null);
@@ -19,38 +26,41 @@ export default function AnnouncementsPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user && user.email === "admin@hrdc.com") {
-        setUser(user);
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("🔒 Auth State Changed:", currentUser?.email);
+      if (currentUser?.email === "admin@hrdc.com") {
+        setUser(currentUser);
       } else {
-        router.push("/login"); // redirect if not admin
+        router.push("/login"); // Redirect if not admin
       }
     });
-
     return () => unsubscribe();
   }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
+    setSuccess("");
+
     if (!title || !content) {
       setError("Please fill in all fields.");
       return;
     }
 
     try {
-      await addDoc(collection(db, "announcements"), {
+      const docRef = await addDoc(collection(db, "announcements"), {
         title,
         content,
         timestamp: serverTimestamp(),
         author: user.email,
       });
+      console.log("✅ Announcement posted with ID:", docRef.id);
       setTitle("");
       setContent("");
       setSuccess("Announcement posted successfully!");
-      setError("");
     } catch (err: any) {
+      console.error("❌ Error posting announcement:", err);
       setError("Failed to post announcement.");
-      console.error(err);
     }
   };
 
@@ -85,4 +95,3 @@ export default function AnnouncementsPage() {
     </>
   );
 }
-
