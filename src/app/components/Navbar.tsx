@@ -15,11 +15,12 @@ export const NavBar = () => {
   // Track user authentication state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("PRODUCTION NAVBAR: User is now:", currentUser?.email); // 👈 Add this line
       setUser(currentUser);
     });
     return () => unsubscribe();
   }, []);
-
+  
   // Logout function
   const handleLogout = async () => {
     await signOut(auth);
