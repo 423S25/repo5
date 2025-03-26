@@ -8,8 +8,12 @@ const db = getFirestore(app);
 export async function getAnnouncements() {
   const q = query(collection(db, "announcements"), orderBy("timestamp", "desc"));
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
+  const results = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
   }));
+
+  console.log("PRODUCTION getAnnouncements fetched:", results); // 👈 Debug log
+
+  return results;
 }
