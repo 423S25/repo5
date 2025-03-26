@@ -1,9 +1,13 @@
-// src/app/login/page.tsx
-
 "use client";
 
 import { useState } from "react";
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+  browserLocalPersistence,
+  setPersistence,
+} from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 import { useRouter } from "next/navigation";
 
@@ -16,6 +20,7 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      await setPersistence(auth, browserLocalPersistence); // 👈 ensures session works in production
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/");
     } catch (err: any) {
@@ -26,6 +31,7 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
     try {
+      await setPersistence(auth, browserLocalPersistence); // 👈 also for Google login
       await signInWithPopup(auth, provider);
       router.push("/");
     } catch (err: any) {
@@ -54,7 +60,9 @@ export default function LoginPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">Login</button>
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+          Login
+        </button>
       </form>
 
       {/* OR Divider */}
