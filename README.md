@@ -3,7 +3,8 @@ Project for ESOF 432 - an Intranet system for the HRDC
 
 
 Visit our live HRDC Intranet [here](https://repo5-rho.vercel.app/)
-Admin Email is: admin@hrdc.com and Password: admin123
+
+(Admin Email is: admin@hrdc.com and Password: admin123)
 
 
 # Product Website 
