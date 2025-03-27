@@ -46,7 +46,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>HRDC Intranet Developer Documentation</h1>
+        <h1>HRDC Intranet Developer Documentation <span style="color: #cc0000; font-size: 0.6em;">(Updated since Beta Release)</span></h1>
+
 
         <h2>Source Code Access</h2>
         <p>The source code is available on GitHub:</p>
@@ -61,10 +62,27 @@
             <li><strong>Future Development:</strong> Additional features and files will be integrated in upcoming iterations.</li>
         </ul>
 
+        <h2>Authentication </h2>
+        <ul>
+          <li><strong>Firebase Authentication:</strong> Implemented email/password and Google login using Firebase Auth.</li>
+          <li><strong>User Roles:</strong> Authenticated users are assigned roles based on their login email. </li>
+          <li><strong>Session Handling:</strong> Logged-in users persist via Firebase and are redirected on login/logout.</li>
+        </ul>
+
+       <h2>Announcements Feature </h2>
+        <ul>
+          <li><strong>Firestore Integration:</strong> Announcements are stored in Firebase Firestore.</li>
+          <li><strong>Display:</strong> Announcements appear dynamically on the homepage for all users.</li>
+          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create announcements via the protected route <code>/announcements</code>.</li>
+          <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
+        </ul>
+
+
+
         <h2>Testing</h2>
         <ul>
-            <li><strong>Testing Focus:</strong> Primarily black-box testing with usability testing for non-technical and elderly users. We will also focuse on HCI testing, this would include acessbility and testing users who fit are target profile (elderly and non technical). </li>
-            <li><strong>Automated Testing:</strong> We will be adding in automated testing along with black box and HCI. We will reffer to this link on resources to do so https://www.w3.org/WAI/test-evaluate/tools/list/</li>
+            <li><strong>Testing Focus:</strong> Primarily black-box testing with usability testing for non-technical and elderly users. We will also focus on HCI testing, this would include accessibility and testing users who fit our target profile (elderly and non-technical). </li>
+            <li><strong>Automated Testing:</strong> We will be adding in automated testing along with black box and HCI. We will refer to this link on resources to do so https://www.w3.org/WAI/test-evaluate/tools/list/</li>
         </ul>
 
         <h2>Release Process</h2>
