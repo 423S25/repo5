@@ -1,0 +1,219 @@
+{
+  "id": "8e4789b2-b2fe-490e-bc6d-6ed0545bf515",
+  "version": "2.0",
+  "name": "HRDC_Admin_Announcement",
+  "url": "https://repo5-rho.vercel.app",
+  "tests": [{
+    "id": "4ecec4e8-8f07-4530-81ce-1a780ec1feb9",
+    "name": "LoginAndPostTest",
+    "commands": [{
+      "id": "dc8980bf-18e4-45e0-b79f-0f22bb63e355",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4db21850-150d-4423-95f0-3b54e3da2f17",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1266x809",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f79fdca8-9384-4bd9-9c14-f2dfbc77da70",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.bg-blue-500", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c980004b-50f8-491a-b878-b78c796986ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1)",
+      "targets": [
+        ["css=.border:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ef89cc0-2813-4dfd-8eca-590363302b06",
+      "comment": "",
+      "command": "type",
+      "target": "css=.border:nth-child(1)",
+      "targets": [
+        ["css=.border:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='admin@hrdc.']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin@hrdc."
+    }, {
+      "id": "6da34054-ddc6-460c-b4f9-00997f805525",
+      "comment": "",
+      "command": "type",
+      "target": "css=.border:nth-child(1)",
+      "targets": [
+        ["css=.border:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='admin@hrdc.com']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin@hrdc.com"
+    }, {
+      "id": "80da8ba5-de05-478d-b37e-fe48c3fbf758",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(2)",
+      "targets": [
+        ["css=.border:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ceb6ef2-897d-4c46-ae40-63d5e398cc3f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.border:nth-child(2)",
+      "targets": [
+        ["css=.border:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='admin123']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "admin123"
+    }, {
+      "id": "b05cf7b8-98b7-4963-9371-5be470052431",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-blue-500",
+      "targets": [
+        ["css=.bg-blue-500", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b1152a5-1ece-4556-9dc5-9d4109b24690",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Manage Announcements",
+      "targets": [
+        ["linkText=Manage Announcements", "linkText"],
+        ["css=.underline", "css:finder"],
+        ["xpath=//a[contains(text(),'Manage Announcements')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/announcements')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Manage Announcements')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82c962a9-17f1-407a-86fd-56b6daac1b95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1)",
+      "targets": [
+        ["css=.border:nth-child(1)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//body/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c687c22b-7f5f-481d-aa09-255258c3f43b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.border:nth-child(1)",
+      "targets": [
+        ["css=.border:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Selenium Test ']", "xpath:attributes"],
+        ["xpath=//body/div/form/input", "xpath:position"]
+      ],
+      "value": "Selenium Test "
+    }, {
+      "id": "459d38f5-8963-44ff-93dc-bfcf95d85578",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-32",
+      "targets": [
+        ["css=.h-32", "css:finder"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4f7ee29-257b-4b9e-a177-bc5b90505996",
+      "comment": "",
+      "command": "type",
+      "target": "css=.h-32",
+      "targets": [
+        ["css=.h-32", "css:finder"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Recording Selenium"
+    }, {
+      "id": "9a537513-023e-4ce0-8077-607e6f804e03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-green-600",
+      "targets": [
+        ["css=.bg-green-600", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//body/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post Announcement')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2d9634d-ba11-4b9f-a4f5-d2d850a2a513",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-red-500",
+      "targets": [
+        ["css=.bg-red-500", "css:finder"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4e957c6-e81e-4b6f-a43d-e89b1d1c003c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.bg-blue-500", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1ad3890-c9da-4b70-a1c8-c52a9a2e09cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-4:nth-child(4) > .text-sm",
+      "targets": [
+        ["css=.mb-4:nth-child(4) > .text-sm", "css:finder"],
+        ["xpath=//li[4]/p[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "91b8a01e-2b72-4d93-9f3e-a9638a68ca63",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4ecec4e8-8f07-4530-81ce-1a780ec1feb9"]
+  }],
+  "urls": ["https://repo5-rho.vercel.app/"],
+  "plugins": []
+}

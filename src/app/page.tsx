@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NavBar } from "./components/Navbar";
 import { getAnnouncements } from "@/utils/getAnnouncements";
 

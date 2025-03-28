@@ -21,6 +21,7 @@ export default function SearchPage() {
     return (
         <>
             <NavBar />
+           
             <div className="container mx-auto p-6">
                 <Suspense fallback={<p className="text-gray-500">Loading search results...</p>}>
                     <SearchResults />
@@ -46,6 +47,7 @@ function SearchResults() {
 
     return (
         <div>
+            
             <h1 className="text-3xl font-bold mb-4">Search Results for: &quot;{query}&quot;</h1>
             {filteredResults.length > 0 ? (
                 <ul className="list-disc ml-6">
