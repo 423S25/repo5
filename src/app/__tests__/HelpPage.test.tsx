@@ -1,3 +1,8 @@
+jest.mock('@/firebaseConfig', () => ({
+  auth: {},
+  firebaseConfig: {},
+}));
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import HelpPage from "../help/page";
 
