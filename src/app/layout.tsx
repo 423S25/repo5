@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+ 
+export const metadata: Metadata = {
+  title: 'HRDC Staff Intranet',
+ // description: 'The official Next.js Course Dashboard, built with App Router.',
+  //metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
