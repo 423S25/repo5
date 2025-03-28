@@ -42,7 +42,7 @@ export default function LoginPage() {
   return (
     
     <div className="flex flex-col items-center justify-center h-screen">
-      <head><title>HRDC Staff Intranet</title></head>
+    
       <h1 className="text-2xl font-bold mb-4">Login</h1>
       {error && <p className="text-red-500 mb-4">{error}</p>}
 

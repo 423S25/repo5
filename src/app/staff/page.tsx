@@ -4,7 +4,7 @@ export default function StaffPage() {
     return (
         <>
             <NavBar />
-            <head><title>HRDC Staff Intranet</title></head>
+        
             <div className="container mx-auto p-6">
                 <h1 className="text-3xl font-bold">HRDC Staff Resources</h1>
                 <p>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>

@@ -26,7 +26,7 @@ export default function HelpPage() {
   return (
     <>
       <NavBar /> 
-      
+
       <div className="container mx-auto p-6">
         <div className="bg-white shadow-md p-6 rounded-lg">
           <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">Help & Support</h1>
