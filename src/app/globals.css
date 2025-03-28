@@ -32,3 +32,15 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+
+.calendar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calendar-iframe {
+  border: solid 1px #777;
+  width: 100%;
+  max-width: 750px;
+  height: 750px;
+}
