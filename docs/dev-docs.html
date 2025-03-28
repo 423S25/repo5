@@ -81,19 +81,64 @@
 
 
 
-      <h2>Testing <span style="color: #cc0000; font-size: 0.8em;">(Expanded since Beta Release)</span></h2>
+     <h2>Testing</h2>
 
 <ul>
-    <li><strong>Unit Tests Implemented:</strong> Tests were created using <code>@testing-library/react</code> for the Help Page. These tests check rendering of FAQ content, search functionality, and accessibility of UI elements. Test files are located in the <code>__tests__</code> directory.</li>
-    
-    <li><strong>Manual Testing:</strong> Manual testing was performed for login/logout, posting announcements, announcement display, and role-based access (admin vs. general users).</li>
-    
-    <li><strong>Selenium IDE Test:</strong> An end-to-end test was created using Selenium IDE to simulate admin login, posting an announcement, and logout. The test file is included in the root directory as <code>PostAnnouncementTest.side</code>. You can <a href="https://github.com/423S25/repo5/raw/main/PostAnnouncementTest.side" target="_blank">download the test .side file here</a>.</li>
+  <li><strong>Unit Tests Implemented <span style="color: #cc0000; font-size: 0.8em;">(New)</span>:</strong> 
+    Tests were created using <code>@testing-library/react</code> for the Help Page. These tests check rendering of FAQ content, search functionality, and accessibility of UI elements. Test files are located in the <code>__tests__</code> directory.
+  </li>
+  
+  <li><strong>Manual Testing <span style="color: #cc0000; font-size: 0.8em;">(Expanded)</span>:</strong> 
+    Manual testing was performed for login/logout, posting announcements, announcement display, and role-based access (admin vs. general users).
+  </li>
+  
+  <li><strong>Selenium IDE Test <span style="color: #cc0000; font-size: 0.8em;">(New)</span>:</strong> 
+    An end-to-end test was created using Selenium IDE to simulate admin login, posting an announcement, and logout. The test file is included in the root directory as <code>PostAnnouncementTest.side</code>. You can <a href="https://github.com/423S25/repo5/raw/main/PostAnnouncementTest.side" target="_blank">download the test .side file here</a>.
+  </li>
 
-    <li><strong>Testing Focus:</strong> Our testing strategy focused on black-box testing, with usability testing for non-technical and elderly users. Human-Computer Interaction (HCI) principles were also considered, including accessibility, color contrast, and navigation clarity.</li>
-    
-    <li><strong>Automated Testing (Planned):</strong> We plan to expand automated testing beyond the Help Page and include accessibility testing using tools such as those listed on the <a href="https://www.w3.org/WAI/test-evaluate/tools/list/" target="_blank">W3C Accessibility Testing Tools</a> site.</li>
+  <li><strong>Testing Focus <span style="color: #cc0000; font-size: 0.8em;">(Expanded)</span>:</strong> 
+    Our testing strategy focused on black-box testing, with usability testing for non-technical and elderly users. Human-Computer Interaction (HCI) principles were also considered, including accessibility, color contrast, and navigation clarity.
+  </li>
+  
+  <li><strong>Automated Testing (Planned) <span style="color: #cc0000; font-size: 0.8em;">(New)</span>:</strong> 
+    We plan to expand automated testing beyond the Help Page and include accessibility testing using tools such as those listed on the 
+    <a href="https://www.w3.org/WAI/test-evaluate/tools/list/" target="_blank">W3C Accessibility Testing Tools</a> site.
+  </li>
 </ul>
+
+
+        <h3>Test Coverage <span style="color: #cc0000; font-size: 0.8em;">(New)</span></h3>
+
+<p>
+  We used <code>Jest</code> with <code>@testing-library/react</code> to measure how much of our Help Page code is covered by automated tests.
+  Firebase was successfully mocked using <code>jest.mock()</code> and a <code>__mocks__/firebaseConfig.ts</code> file. 
+</p>
+
+<p>
+  While we focused testing on the Help Page (our most interactive and static-content-heavy page), other parts of the app rely heavily on dynamic Firebase behavior (e.g., login, announcements), which complicates automated testing.
+</p>
+
+<p><strong>Test Coverage Output:</strong></p>
+
+<pre>
+File         | % Stmts | % Branch | % Funcs | % Lines
+-------------|---------|----------|---------|---------
+components   |   37.93 |     0    |    10   |   37.03
+Navbar.tsx   |   37.93 |     0    |    10   |   37.03
+help         |   81.81 |    50    |    60   |   81.81
+page.tsx     |   81.81 |    50    |    60   |   81.81
+All files    |    50   |    20    |  26.66  |    50
+</pre>
+
+<p>
+  <strong>Note:</strong> Testing on <code>Navbar.tsx</code> is limited due to its reliance on Next.js <code>useRouter()</code> and Firebase authentication. 
+</p>
+
+<p>
+  You can replicate the coverage report by running:
+</p>
+
+<pre><code>npx jest --coverage</code></pre>
 
 
 
