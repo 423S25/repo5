@@ -21,6 +21,7 @@ export default function SearchPage() {
     return (
         <>
             <NavBar />
+            <head><title>HRDC Staff Intranet</title></head>
             <div className="container mx-auto p-6">
                 <Suspense fallback={<p className="text-gray-500">Loading search results...</p>}>
                     <SearchResults />
