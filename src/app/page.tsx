@@ -3,7 +3,6 @@ export const dynamic = "force-dynamic";
 import { NavBar } from "./components/Navbar";
 import { getAnnouncements } from "@/utils/getAnnouncements";
 
-
 export default async function HomePage() {
   const announcements = await getAnnouncements();
 
@@ -33,9 +32,18 @@ export default async function HomePage() {
             </ul>
           )}
         </div>
-        <div className = "calendar">
-          <h4>HRDC Calendar</h4>
-          <p><iframe src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="750" height="750" frameborder="0" scrolling="no"></iframe></p>
+
+        {/* Fixed calendar section */}
+        <div className="calendar mt-8">
+          <h4 className="text-lg font-semibold">HRDC Calendar</h4>
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5"
+            style={{ border: "solid 1px #777" }}
+            width="750"
+            height="750"
+            frameBorder="0"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
     </div>
