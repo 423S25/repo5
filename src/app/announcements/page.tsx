@@ -67,6 +67,7 @@ export default function AnnouncementsPage() {
   return (
     <>
       <NavBar />
+      <head><title>HRDC Staff Intranet</title></head>
       <div className="container mx-auto p-6 max-w-xl">
         <h1 className="text-3xl font-bold mb-4">Post New Announcement</h1>
 
