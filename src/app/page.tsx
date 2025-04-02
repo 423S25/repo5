@@ -28,6 +28,16 @@ export default async function HomePage() {
           Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
         </p> */}
 
+      <div style={{width: '100%', height: '100%', position: 'relative'}}>
+      <div style={{width: 800, height: 450, left: 0, top: 0, position: 'absolute', background: '#A1A750', boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', borderRadius: 20}} />
+      <div style={{width: 700, height: 100, left: 43, top: 300, position: 'absolute', background: '#147278', boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', borderRadius: 50}} />
+      <div style={{width: 400, height: 50, left: 200, top: 325, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>QUICK LINKS</div>
+      <div style={{width: 700, height: 100, left: 43, top: 175, position: 'absolute', background: '#147278', boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', borderRadius: 50}} />
+      <div style={{width: 600, height: 50, left: 100, top: 200, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>EMPLOYEE RESOURCES</div>
+      <div style={{width: 700, height: 100, left: 43, top: 50, position: 'absolute', background: '#147278', boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', borderRadius: 50}} />
+      <div style={{width: 400, height: 50, left: 200, top: 75, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>CALENDAR</div>
+      </div>
+
         {/* Announcements Section */}
         <div style={{width: '100%', height: '100%', position: 'relative', borderRadius: 20}}>
         <div style={{width: 800, height: 600, left: 0, top: 0, position: 'absolute', background: '#147278', boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', borderRadius: 20}} />
