@@ -9,6 +9,7 @@ export default async function HomePage() {
   return (
     <div>
       <NavBar />
+      
       <div className="text-center mt-10">
       <div style={{width: '100%', height: '100%', position: 'relative'}}>
       <div style={{width: 800, height: 200, left: 0, top: 0, position: 'absolute', background: '#147278', boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', borderRadius: 20}} />
@@ -17,8 +18,10 @@ export default async function HomePage() {
       <div style={{width: 40, height: 40, left: 51, top: 109, position: 'absolute'}}>
       <div style={{width: 30, height: 30, left: 5, top: 5, position: 'absolute', background: '#003E52'}} />
       </div>
+
       <div style={{width: 730, height: 60, left: 35, top: 23, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>What can we help you find today?</div>
       </div>
+      <p></p>
       
         {/* <h1 className="text-3xl font-bold">HRDC Intranet</h1>
         <p className="text-gray-600 mt-2">
