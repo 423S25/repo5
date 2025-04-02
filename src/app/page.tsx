@@ -29,8 +29,13 @@ export default async function HomePage() {
         </p> */}
 
         {/* Announcements Section */}
-        <div className="mt-6 p-4 rounded" style={{ backgroundColor: "#9FA45A" }}>
-          <h2 className="text-xl font-semibold">Announcements</h2>
+        <div style={{width: '100%', height: '100%', position: 'relative', borderRadius: 20}}>
+        <div style={{width: 800, height: 600, left: 0, top: 0, position: 'absolute', background: '#147278', boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', borderRadius: 20}} />
+        <div style={{width: 750, height: 475, left: 25, top: 100, position: 'absolute', background: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25) inset', borderRadius: 20}} />
+        <div style={{width: 400, height: 50, left: 35, top: 23, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>WHAT’S NEW</div>
+        </div>
+        {/* <div className="mt-6 p-4 rounded" style={{ backgroundColor: "#9FA45A" }}>
+          <h2 className="text-xl font-semibold">Announcements</h2> */}
           {announcements.length === 0 ? (
             <p className="text-gray-600">No new announcements.</p>
           ) : (
