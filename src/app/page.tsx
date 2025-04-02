@@ -7,7 +7,7 @@ export default async function HomePage() {
   const announcements = await getAnnouncements();
 
   return (
-    <div>
+      <div>
       <NavBar />
       
       <div className="text-center mt-10">
@@ -65,6 +65,12 @@ export default async function HomePage() {
         <div className="calendar mt-8">
          {/* <h4 className="text-lg font-semibold">HRDC Calendar</h4> */}
 
+         <div style={{width: '100%', height: '100%', position: 'relative', borderRadius: 20}}>
+         <div style={{width: 800, height: 900, left: 0, top: 0, position: 'absolute', background: '#147278', boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', borderRadius: 20}} />
+         <div style={{width: 750, height: 750, left: 25, top: 100, position: 'absolute', background: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25) inset', borderRadius: 20}} />
+         <div style={{width: 400, height: 50, left: 35, top: 23, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>CALENDAR</div>
+         </div>
+
           <iframe
             src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5"
             style={{ border: "solid 1px #777" }}
@@ -75,7 +81,6 @@ export default async function HomePage() {
           ></iframe>
         </div>
       </div>
-    </div>
   );
 }
 
