@@ -17,12 +17,21 @@ export default function StaffPage() {
                 </ul>
 
                 {/* HR  */}
-                <h2 className="text-2xl font-semibold mt-6">HR Resources</h2>
-                <ul className="list-disc ml-6">
-                    <li> Employee Handbook & HR Policies (Link it here)</li>
-                  
-                    <li>Payroll & Benefits Information (Link it here)</li>
-                </ul>
+            <h2 className="text-2xl font-semibold mt-6">HR Resources</h2>
+            <ul className="list-disc ml-6">
+              <li>
+                <a
+      href="/Employee_Handbook.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 underline"
+    >
+      Employee Handbook & HR Policies
+    </a>
+  </li>
+ {/* <li>Payroll & Benefits Information (Link it here)</li> */}
+</ul>
+
 
                 {/* Contact Info */}
                 <h2 className="text-2xl font-semibold mt-6">📞 Need Help?</h2>
