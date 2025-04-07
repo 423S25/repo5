@@ -19,6 +19,34 @@ export default async function HomePage() {
         </p>
       </div>
 
+      {/*Seach bar Section */}
+      <div className="flex justify-center mt-10">
+        <div
+            style={{
+              width: 800,
+              background: "#147278",
+              borderRadius: 20,
+              boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+              padding: 20,
+              maxHeight: 200,
+              color: "white",
+            }}
+          >
+        <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+
+        <div style={{
+          width: '100%', 
+          height: '100%', 
+          background: 'white', 
+          borderRadius: 50
+          }} 
+        >
+
+      </div>
+      </div>
+      </div>
+
+
       {/* Announcements Box Styled as "What's New" */}
       <div className="flex justify-center mt-10">
         <div
