@@ -4,6 +4,7 @@ export default function LinksPage() {
   return (
     <>
       <NavBar /> {/* Navbar stays full width */}
+     
       <div className="container mx-auto p-6"> 
         <h1 className="text-3xl font-bold mb-4">Important Links</h1>
         
@@ -20,6 +21,9 @@ export default function LinksPage() {
    
 <div style={{width: 730, height: 60, left: 35, top: 23, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>What can we help you find today?</div>
 </div>
+        <p>Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.</p>
+       
+
         <h2 className="text-2xl font-semibold mt-6">Important Links</h2>
         <ul className="list-disc ml-6">
             <li className="mt-2">

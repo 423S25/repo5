@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --navbar-bg: #336F77; 
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+}
+
+.navbar img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.calendar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calendar-iframe {
+  border: solid 1px #777;
+  width: 100%;
+  max-width: 750px;
+  height: 750px;
+}

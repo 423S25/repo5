@@ -1,14 +1,15 @@
 # group5
 Project for ESOF 432 - an Intranet system for the HRDC
 
-Visit our project website [here](https://423s25.github.io/repo5/) for full user documentation
 
-# User Documentation
-User documentation can be found [here](./UserDocumentation).
+Visit our live HRDC Intranet [here](https://repo5-rho.vercel.app/)
 
-# Developer Documentation 
+(Admin Email is: admin@hrdc.com and Password: admin123)
 
-Developer documentation can be found [here](./DeveloperDocs).
+
+# Product Website 
+
+Visit our product website [here](https://423s25.github.io/repo5/) for full user and developer documentation
 
 # Contribution
 
@@ -23,7 +24,7 @@ To contribute to this project:
 7. tag someone for a review (probably not necessary for smaller changes)
 8. once someone approves, merge it
 
-Full Developer documentation can be found [here](./DeveloperDocs).
+
 
 # Maintainers
 
@@ -43,11 +44,4 @@ Full Developer documentation can be found [here](./DeveloperDocs).
 
 [Kira Hopkins](https://github.com/KiraHopkins)
 
-Group Members: 
-Talia Clark
-Kira Hopkins
-Mark Kwapisz
-Sierrah Paul
-Ryan Plusch
-Ryley Sanden
-Henry Weston
+

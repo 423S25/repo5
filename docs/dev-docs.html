@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRDC Intranet Developer Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            max-width: 900px;
+            margin: auto;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HRDC Intranet Developer Documentation</h1>
+    <p style="color: #cc0000; font-size: 0.9em; font-weight: bold; margin-top: -10px;">
+      (Updated since Beta Release)</p>
+
+
+        <h2>Source Code Access</h2>
+        <p>The source code is available on GitHub:</p>
+        <p><a href="https://github.com/423S25/repo5" target="_blank">HRDC Intranet GitHub Repository</a></p>
+
+        <h2>Project Structure</h2>
+        <p>The project follows a structured directory setup to separate user and admin functionalities for better organization.</p>
+
+        <h2>Build Process</h2>
+        <ul>
+            <li><strong>Framework:</strong> Built using Next.js as the primary technology.</li>
+            <li><strong>Future Development:</strong> Additional features and files will be integrated in upcoming iterations.</li>
+        </ul>
+
+        <h2>Authentication <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+        <ul>
+          <li><strong>Firebase Authentication:</strong> Implemented email/password and Google login using Firebase Auth.</li>
+          <li><strong>User Roles:</strong> Authenticated users are assigned roles based on their login email. </li>
+          <li><strong>Session Handling:</strong> Logged-in users persist via Firebase and are redirected on login/logout.</li>
+        </ul>
+
+      <h2>Announcements Feature <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+        <ul>
+          <li><strong>Firestore Integration:</strong> Announcements are stored in Firebase Firestore.</li>
+          <li><strong>Display:</strong> Announcements appear dynamically on the homepage for all users.</li>
+          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create announcements.</li>
+          <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
+            <li><strong>Google Calendar Integration:</strong> A shared HRDC calendar was embedded using an <code>&lt;iframe&gt;</code> element in <code>src/app/page.tsx</code>.</li>
+
+        </ul>
+
+
+
+   <h2>Testing <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+
+<ul>
+
+      <li><strong>Unit Tests Implemented:</strong> Tests were created using <code>@testing-library/react</code> for the Help Page. These tests check rendering of FAQ content, search functionality, and accessibility of UI elements. Test files are located in the <code>__tests__</code> directory.</li>
+
+  <li><strong>Manual Testing: </strong> 
+    Manual testing was performed for login/logout, posting announcements, announcement display, and role-based access (admin vs. general users).
+  </li>
+  
+  <li><strong>Selenium IDE Test:</strong> 
+    An end-to-end test was created using Selenium IDE to simulate admin login, posting an announcement, and logout. The test file is included in the root directory as <code>PostAnnouncementTest.side</code>. You can <a href="https://github.com/423S25/repo5/raw/main/PostAnnouncementTest.side" target="_blank">download the test .side file here</a>.
+  </li>
+
+  <li><strong>Human-Computer Interaction Tests:</strong> 
+    Since our webpage is intended for non-technical and elderly users, Human-Computer Interaction (HCI) principles were also considered, including accessibility, color contrast, and navigation clarity using tools such as those listed on the 
+    <a href="https://www.w3.org/WAI/test-evaluate/tools/list/" target="_blank">W3C Accessibility Testing Tools</a> site.
+  </li>
+</ul>
+
+
+        <h3>Test Coverage <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h3>
+
+<p>
+  We used <code>Jest</code> with <code>@testing-library/react</code> to measure how much of our Help Page code is covered by automated tests.
+  Firebase was successfully mocked using <code>jest.mock()</code> and a <code>__mocks__/firebaseConfig.ts</code> file. 
+</p>
+
+<p>
+  While we focused testing on the Help Page (our most interactive and static-content-heavy page), other parts of the app rely heavily on dynamic Firebase behavior (e.g., login, announcements), which complicates automated testing.
+</p>
+
+<p><strong>Test Coverage Output:</strong></p>
+
+<pre>
+File         | % Stmts | % Branch | % Funcs | % Lines
+-------------|---------|----------|---------|---------
+components   |   37.93 |     0    |    10   |   37.03
+Navbar.tsx   |   37.93 |     0    |    10   |   37.03
+help         |   81.81 |    50    |    60   |   81.81
+page.tsx     |   81.81 |    50    |    60   |   81.81
+All files    |    50   |    20    |  26.66  |    50
+</pre>
+
+<p>
+  <strong>Note:</strong> Testing on <code>Navbar.tsx</code> is limited due to its reliance on Next.js <code>useRouter()</code> and Firebase authentication. 
+</p>
+
+<p>
+  You can replicate the coverage report by running:
+</p>
+
+<pre><code>npx jest --coverage</code></pre>
+
+
+
+        <h2>Release Process</h2>
+        <p>New releases are published on the project's <a href="https://github.com/423S25/repo5" target="_blank">GitHub repository</a>.</p>
+
+        <h2>Bug Tracking</h2>
+        <p>Issues are tracked through GitHub Issues. Developers should report, document, and resolve issues efficiently.</p>
+        <p>Submit bug reports here: <a href="https://github.com/423S25/repo5/issues" target="_blank">GitHub Issues Page</a></p>
+
+        <h2>Code Documentation Best Practices</h2>
+        <ul>
+            <li>Comments should provide context, not just describe the code.</li>
+            <li>If the comment is unclear, the code should be rewritten for better clarity.</li>
+            <li>Use external references where needed for complex logic.</li>
+            <li>Bug fixes should always be documented in comments.</li>
+        </ul>
+
+
+      <h2>Class Diagram</h2>
+        <p>The following diagram illustrates the core structure of the HRDC Intranet system.</p>
+        <img src="https://raw.githubusercontent.com/423S25/repo5/main/ClassDiagram.jpeg" alt="Class Diagram for HRDC Intranet" width="600">
+
+
+        <h2>UML Diagrams <span style="color: #cc0000; font-size: 0.8em;">(Expanded since Beta Release)</span></h2> 
+        <p>View additional UML diagrams here: <a href="https://lucid.app/lucidchart/836dd166-6b37-4ea5-9dd0-20db403e8c89/edit?viewport_loc=-405%2C-607%2C2334%2C1076%2C0_0&invitationId=inv_b3e05374-a2e8-4f75-998f-e1e801f5092d" target="_blank">Lucidchart UML Diagrams</a>.</p>
+        <p>More Additional UML diagrams here: <a href="https://lucid.app/lucidchart/91a26bfb-cc7b-449f-9ba2-4eadc2cc334e/edit?invitationId=inv_b408ba21-a78b-4ccf-b15b-d77c43610e5e&page=_WH0BOjE-laI#" target="_blank">Lucidchart UML Diagrams</a>.</p>
+
+        <div class="footer">
+            <p>Last Updated: <span id="lastUpdated"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

@@ -5,70 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRDC Intranet</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; max-width: 800px; }
-        h1, h2 { color: #333; }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 40px; 
+            padding: 20px; 
+            background-color: #f9f9f9; 
+            max-width: 900px; 
+            margin: auto; 
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 { 
+            color: #2c3e50; 
+            border-bottom: 2px solid #ddd; 
+            padding-bottom: 5px;
+        }
+        ul { 
+            padding-left: 20px; 
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to the HRDC Intranet</h1>
+        <p>The <strong>HRDC Staff Intranet</strong> is a secure internal platform designed to help HRDC employees and volunteers efficiently access forms, announcements, and key resources. The system is user-friendly and designed for easy navigation.</p>
 
-    <h1>Welcome to the HRDC Intranet</h1>
-    <p>This intranet is designed to help HRDC employees and volunteers access timecards, forms, announcements, and other essential resources.</p>
+        <h2>Access the Intranet</h2>
+        <p>Click below to visit the live HRDC Intranet:</p>
+        <p><a href="https://repo5-rho.vercel.app/" target="_blank">Visit HRDC Intranet</a></p>
 
-    <h2> Group 5 Product Website</h2>
-    <p>Our product is an intranet site requested by HRDC to assist employees and volunteers in accessing timecards, forms, and other necessary information.</p>
+        <h2>Documentation</h2>
+        <ul>
+          
+            <li><a href="user-docs.html" target="_blank">User Documentation</a> – Guide for employees and volunteers.</li>
+            <li><a href="dev-docs.html" target="_blank">Developer Documentation</a> – Technical setup and system details.</li>
 
-    <h2> Key Features</h2>
-    <ul>
-        <li> Search Functionality – Users can browse the HRDC Google Drive for any required forms.</li>
-        <li> Admin Announcements – HRDC admins can post updates such as timecard due dates, training sessions, and W-2 form availability.</li>
-        <li> User Logins – Employees and volunteers can log in to access personalized documents (W-2s, training materials, payroll forms).</li>
-        <li> Easy Access to HRDC Forms – Frequently used forms are pinned for quick retrieval.</li>
-        <li> User-Friendly Design – Designed for elderly users, visually impaired individuals, and non-native English speakers.</li>
-    </ul>
+        </ul>
 
-    <h2> User Documentation</h2>
-    <p>This intranet will be linked to the main HRDC website via a subdomain, ensuring easy access for users. The interface is designed to minimize the need for HRDC admin assistance when finding and filling out forms.</p>
-    <p> The full <strong>User Documentation</strong> can be found <a href="https://github.com/423S25/repo5/blob/main/UserDocumentation" target="_blank">here</a>.</p>
-    <h2> Developer Documentation</h2>
-    <ul>
-        <li> Source Code: Available on <a href="https://github.com/423S25/repo5" target="_blank">GitHub</a>.</li>
-        <li> Framework: Built using Next.js for a fast, responsive interface.</li>
-        <li> Code Documentation: Follows best practices to ensure easy maintenance.</li>
-        <li> The full <strong>Developer Documentation</strong> can be found <a href="https://github.com/423S25/repo5/blob/main/DeveloperDocs" target="_blank">here</a>.</li>
-    </ul>
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Search Functionality</strong> – Quickly locate HRDC forms and documents.</li>
+            <li><strong>Admin Announcements</strong> – Stay informed with important updates.</li>
+            <li><strong>Quick Links</strong> – Direct access to frequently used HR documents.</li>
+            <li><strong>User Authentication</strong> – Secure logins for personalized access.</li>
+        </ul>
 
-    <h2> How to Obtain Source Code</h2>
-    <p>The source code is accessible through the <a href="https://github.com/423S25/repo5" target="_blank">GitHub project</a>. The final project will also be hosted online.</p>
+        <h2>Need Help?</h2>
+        <p>For any issues, please report them via <a href="https://github.com/423S25/repo5/issues" target="_blank">GitHub Issues</a>.</p>
 
-    <h2> Planned Directory Structure</h2>
-    <p>We are using a two-level directory structure to separate directories for each user type, ensuring better organization.</p>
+        <div class="footer">
+            <p>Last Updated: <span id="lastUpdated"></span></p>
+        </div>
+    </div>
 
-    <h2> How to Build & Test</h2>
-    <ul>
-        <li> Build Process: The website is built using Next.js, with additional files for future features.</li>
-        <li> Testing: We conduct black-box testing, especially with non-technical users and elderly individuals.</li>
-        <li> Automated Testing: Not currently implemented but will be added as needed.</li>
-    </ul>
-
-    <h2> Version Releases & Bug Tracking</h2>
-    <ul>
-        <li> Releasing Versions: Each new release is published on GitHub.</li>
-        <li> Bug Reporting: Developers and users can report issues through the <a href="https://github.com/423S25/repo5/issues" target="_blank">GitHub Issues page</a>.</li>
-    </ul>
-
-    <h2>Code Documentation Best Practices</h2>
-    <p>We follow strict documentation practices to ensure code clarity and maintainability:</p>
-    <ul>
-        <li> Comments should not duplicate the code.</li>
-        <li> Clear comments should explain why the code exists, not just what it does.</li>
-        <li> If the comment is unclear, the code should be rewritten.</li>
-        <li> Provide links to external sources and references where needed.</li>
-        <li> Always comment when fixing a bug or marking incomplete implementations.</li>
-    </ul>
-
-    <h2> Need Help?</h2>
-    <p>For assistance, contact HRDC support or report an issue via <a href="https://github.com/423S25/repo5/issues" target="_blank">GitHub Issues</a>.</p>
-
+    <script>
+        document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString();
+    </script>
 </body>
 </html>
-
