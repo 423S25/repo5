@@ -7,7 +7,7 @@ export default async function HomePage() {
   const announcements = await getAnnouncements();
 
   return (
-    <div>
+      <div>
       <NavBar />
 
       {/* Welcome Section */}
@@ -43,39 +43,63 @@ export default async function HomePage() {
             }}
           >
             <h3 className="text-xl font-semibold mb-4">Announcements</h3>
-            {announcements.length === 0 ? (
-              <p className="text-gray-600">No new announcements.</p>
-            ) : (
+        {announcements.length === 0 ? (
+            <p className="text-gray-600">No new announcements.</p>
+          ) : (
               <ul>
-                {announcements.map((a: any) => (
-                  <li key={a.id} className="mb-4 border-b pb-2">
+              {announcements.map((a: any) => (
+                <li key={a.id} className="mb-4 border-b pb-2">
                     <h4 className="text-lg font-semibold">{a.title}</h4>
-                    <p>{a.content}</p>
+                  <p>{a.content}</p>
                     <p className="text-sm text-gray-500 mt-1">
                       Posted by {a.author}
                     </p>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
         </div>
       </div>
 
     {/* Calendar Section */}
-<div className="calendar mt-12 flex flex-col items-center">
-  <h4 className="text-lg font-semibold mb-4">HRDC Calendar</h4>
-  <iframe
-    src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5"
-    style={{ border: "1px solid #777" }}
-    width="750"
-    height="750"
-    className="rounded shadow-lg"
-  ></iframe>
-</div>
+    <div className="calendar mt-12 flex flex-col items-center">
+    <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+      <h2 className="text-2xl font-bold mb-4">CALENDAR</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          ></div>
+      <h4 className="text-lg font-semibold mb-4">HRDC Calendar</h4>
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5"
+      style={{ border: "1px solid #777" }}
+            width="750"
+            height="750"
+      className="rounded shadow-lg"
+          ></iframe>
+          </div>
+
+        </div>
 
 
 
-    </div>
+      </div>
   );
 }
+
