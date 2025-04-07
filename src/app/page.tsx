@@ -28,7 +28,6 @@ export default async function HomePage() {
               borderRadius: 20,
               boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
               padding: 20,
-              maxHeight: 400,
               color: "white",
             }}
           >
