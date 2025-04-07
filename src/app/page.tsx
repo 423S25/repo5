@@ -81,7 +81,7 @@ export default async function HomePage() {
               color: "black",
               borderRadius: 20,
               padding: 20,
-              maxHeight: 400,
+              maxHeight: 800, // Increased height for better visibility
               overflowY: "auto",
             }}
           >
