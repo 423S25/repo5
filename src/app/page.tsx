@@ -84,8 +84,7 @@ export default async function HomePage() {
               maxHeight: 400,
               overflowY: "auto",
             }}
-          ></div>
-      <h4 className="text-lg font-semibold mb-4">HRDC Calendar</h4>
+          >
           <iframe
             src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&color=%23039BE5"
       style={{ border: "1px solid #777" }}
@@ -94,8 +93,8 @@ export default async function HomePage() {
       className="rounded shadow-lg"
           ></iframe>
           </div>
-
-        </div>
+      </div>
+      </div>
 
 
 
