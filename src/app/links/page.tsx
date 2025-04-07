@@ -14,6 +14,8 @@ export default function LinksPage() {
 <div style={{width: 40, height: 40, left: 51, top: 109, position: 'absolute'}}>
 <div style={{width: 30, height: 30, left: 5, top: 5, position: 'absolute', background: '#003E52'}} />
 </div>
+<div style={{width: 730, height: 60, left: 35, top: 23, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>What can we help you find today?</div>
+</div>
         <p>Welcome to the Important Links Page. Here you'll find links to websites you need to access often.</p>
    
 <div style={{width: 730, height: 60, left: 35, top: 23, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '700', wordWrap: 'break-word'}}>What can we help you find today?</div>
