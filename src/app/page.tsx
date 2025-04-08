@@ -68,6 +68,8 @@ export default async function HomePage() {
           }} >
       
       <a target="_blank" href="https://repo5-rho.vercel.app/links">Important Links</a>
+
+      </div>
         
       <div 
         style={{
@@ -82,6 +84,8 @@ export default async function HomePage() {
       
       <a target="_blank" href="https://repo5-rho.vercel.app/staff">Staff Resources</a>
 
+      </div>
+      
       <div 
         style={{
           width: 700, 
@@ -94,8 +98,7 @@ export default async function HomePage() {
       
       <a target="_blank" href="https://repo5-rho.vercel.app/help">Staff Resources</a>
 
-      </div>
-      </div>
+      
       </div>
       </div>
       </div>
