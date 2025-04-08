@@ -13,6 +13,7 @@ import {
   deleteDoc,
   doc,
   serverTimestamp,
+  Timestamp, // needed for type
 } from "firebase/firestore";
 
 import { auth, firebaseConfig } from "@/firebaseConfig";
@@ -24,6 +25,15 @@ import { getApp, getApps, initializeApp } from "firebase/app";
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// define a type for announcements so TS stops complaining
+type Announcement = {
+  id: string;
+  title: string;
+  content: string;
+  author?: string;
+  timestamp?: Timestamp;
+};
+
 // main page function
 export default function AnnouncementsPage() {
   // state variables for login, inputs, error, messages, and fetched announcements
@@ -32,7 +42,7 @@ export default function AnnouncementsPage() {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [announcements, setAnnouncements] = useState<any[]>([]);
+  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const router = useRouter();
 
   // runs when page loads or user changes
@@ -53,13 +63,13 @@ export default function AnnouncementsPage() {
   // this gets all announcements from firebase
   const fetchAnnouncements = async () => {
     const snapshot = await getDocs(collection(db, "announcements"));
-    const data = snapshot.docs.map((doc) => ({
+    const data: Announcement[] = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
-    }));
+    })) as Announcement[];
 
     // sort by timestamp descending (newest first)
-    data.sort((a, b) => b.timestamp?.seconds - a.timestamp?.seconds);
+    data.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
     setAnnouncements(data);
   };
 
