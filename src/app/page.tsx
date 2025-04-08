@@ -24,7 +24,6 @@ export default async function HomePage() {
         <div
             style={{
               width: 800,
-              height: 500,
               background: "#147278",
               borderRadius: 20,
               boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
@@ -35,8 +34,8 @@ export default async function HomePage() {
         <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
 
         <div style={{
-          width: '100%', 
-          height: '100%', 
+          width: 700, 
+          height: 200, 
           background: 'white', 
           borderRadius: 50
           }} 
@@ -62,15 +61,16 @@ export default async function HomePage() {
           width: 700, 
           height: 100, 
           left: 43, 
-          top: 300, 
+          top: 300,
+          position: 'relative',
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50
           }} >
       
-      <h2>
+
       <a target="_blank" href="https://repo5-rho.vercel.app/links">Important Links</a>
-      </h2>
+
 
       </div>
         
