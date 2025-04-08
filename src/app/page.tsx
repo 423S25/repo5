@@ -10,6 +10,12 @@ export default async function HomePage() {
       <div>
       <NavBar />
 
+      <div style={{width: '100%', height: '100%', position: 'relative'}}>
+      <div style={{width: 1440, height: 2400, left: 0, top: 100, position: 'absolute', background: '#003E52'}} >
+      <div style={{width: 980, height: 2400, left: 230, top: 100, position: 'absolute', background: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25) inset'}} >
+      <div style={{width: 1440, height: 100, left: 0, top: 0, position: 'absolute', background: '#147278'}} >
+
+
       {/* Welcome Section */}
       <div className="text-center mt-10">
         <h1 className="text-3xl font-bold">HRDC Intranet</h1>
@@ -184,6 +190,10 @@ export default async function HomePage() {
       className="rounded shadow-lg"
           ></iframe>
           </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
       </div>
 
