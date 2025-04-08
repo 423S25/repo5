@@ -1,10 +1,19 @@
+"use client";
 export const dynamic = "force-dynamic";
 
 import { NavBar } from "./components/Navbar";
 import { getAnnouncements } from "@/utils/getAnnouncements";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
-export default async function HomePage() {
-  const announcements = await getAnnouncements();
+export default function HomePageWrapper() {
+  const [searchText, setSearchText] = useState("");
+  const router = useRouter();
+  const [announcements, setAnnouncements] = useState<any[]>([]);
+
+  useEffect(() => {
+    getAnnouncements().then(setAnnouncements);
+  }, []);
 
   return (
     <div>
@@ -64,10 +73,31 @@ export default async function HomePage() {
                   color: "black",
                   borderRadius: 20,
                   padding: 20,
-                  overflowY: "auto",
                 }}
               >
-                {/* You can add actual search input here */}
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    if (searchText.trim() !== "") {
+                      router.push(`/search?query=${searchText}`);
+                    }
+                  }}
+                  className="flex items-center"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="border border-gray-300 rounded px-4 py-2 w-full text-black"
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                  />
+                  <button
+                    type="submit"
+                    className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
+                  >
+                    Search
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -191,7 +221,6 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
