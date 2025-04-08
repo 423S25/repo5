@@ -45,6 +45,65 @@ export default async function HomePage() {
       </div>
       </div>
 
+      {/* Central Button Section*/}
+      <div className="flex justify-center mt-10">
+      <div 
+        style={{
+          width: 800, 
+          height: 450, 
+          position: 'absolute', 
+          background: '#A1A750', 
+          boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', 
+          borderRadius: 20
+          }} >
+      
+      <div 
+        style={{
+          width: 700, 
+          height: 100, 
+          left: 43, 
+          top: 300, 
+          position: 'absolute', 
+          background: '#147278', 
+          boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
+          borderRadius: 50
+          }} >
+      
+      <a target="_blank" href="https://repo5-rho.vercel.app/links">Important Links</a>
+        
+      <div 
+        style={{
+          width: 700, 
+          height: 100, 
+          left: 43, 
+          top: 175, 
+          position: 'absolute', 
+          background: '#147278', 
+          boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
+          borderRadius: 50
+          }} >
+      
+      <a target="_blank" href="https://repo5-rho.vercel.app/staff">Staff Resources</a>
+
+      <div 
+        style={{
+          width: 700, 
+          height: 100, 
+          left: 43, 
+          top: 50, 
+          position: 'absolute', 
+          background: '#147278', 
+          boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
+          borderRadius: 50}} >
+      
+      <a target="_blank" href="https://repo5-rho.vercel.app/help">Staff Resources</a>
+
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
 
       {/* Announcements Box Styled as "What's New" */}
       <div className="flex justify-center mt-10">
