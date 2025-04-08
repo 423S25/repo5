@@ -34,11 +34,12 @@ export default async function HomePage() {
         <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
 
         <div style={{
-          width: 700, 
-          height: 200, 
-          background: 'white', 
-          borderRadius: 50
-          }} 
+          background: "white",
+          color: "black",
+          borderRadius: 20,
+          padding: 20,
+          overflowY: "auto",
+        }}
         >
 
       </div>
@@ -80,6 +81,7 @@ export default async function HomePage() {
           height: 100, 
           left: 43, 
           top: 175, 
+          position: 'relative',
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50
@@ -95,11 +97,12 @@ export default async function HomePage() {
           height: 100, 
           left: 43, 
           top: 50, 
+          position: 'relative',
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50}} >
       
-      <a target="_blank" href="https://repo5-rho.vercel.app/help">Staff Resources</a>
+      <a target="_blank" href="https://repo5-rho.vercel.app/help">Help</a>
 
       
       </div>
