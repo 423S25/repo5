@@ -33,7 +33,7 @@ export default function HomePageWrapper() {
         style={{
           width: 980, 
           background: "white",
-          top: 100,
+          top: 0,
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
           paddingBottom: "100px",
           }}
@@ -41,7 +41,7 @@ export default function HomePageWrapper() {
 
       {/* Welcome Section */}
       <div className="text-center mt-10">
-        <h1 className="text-3xl font-bold">HRDC Intranet</h1>
+        <h1 className="text-3xl font-bold mb-4">HRDC Intranet</h1>
         <p className="text-gray-600 mt-2">
               Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
         </p>
@@ -62,10 +62,10 @@ export default function HomePageWrapper() {
         <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
               <div
                 style={{
-          background: "white",
-          color: "black",
-          borderRadius: 20,
-          padding: 20,
+                  background: "white",
+                  color: "black",
+                  borderRadius: 20,
+                  padding: 20,
                 }}
               >
                 <form
