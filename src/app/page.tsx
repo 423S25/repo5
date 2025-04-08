@@ -50,8 +50,7 @@ export default async function HomePage() {
       <div 
         style={{
           width: 800, 
-          height: 450, 
-          position: 'absolute', 
+          height: 450,  
           background: '#A1A750', 
           boxShadow: '0px 3px 4px 6px rgba(0, 0, 0, 0.20)', 
           borderRadius: 20
@@ -63,7 +62,6 @@ export default async function HomePage() {
           height: 100, 
           left: 43, 
           top: 300, 
-          position: 'absolute', 
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50
@@ -77,7 +75,6 @@ export default async function HomePage() {
           height: 100, 
           left: 43, 
           top: 175, 
-          position: 'absolute', 
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50
@@ -91,7 +88,6 @@ export default async function HomePage() {
           height: 100, 
           left: 43, 
           top: 50, 
-          position: 'absolute', 
           background: '#147278', 
           boxShadow: '0px 4px 4px 2px rgba(0, 0, 0, 0.30)', 
           borderRadius: 50}} >
