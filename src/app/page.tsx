@@ -40,11 +40,23 @@ export default function HomePageWrapper() {
         >
 
       {/* Welcome Section */}
+      
       <div className="text-center mt-10">
+      <div
+          style={{
+            width: 800,
+            background: "#A1A750",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
         <h2 className="text-3xl font-bold mb-4">HRDC Intranet</h2>
         <p className="text-gray-600 mt-2">
               Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
         </p>
+      </div>
       </div>
 
           {/* Search Prompt Section */}
