@@ -12,7 +12,16 @@ export default function StaffPage() {
                 {/* Employee Tasks */}
                 <h2 className="text-2xl font-semibold mt-6"> Staff Actions</h2>
                 <ul className="list-disc ml-6">
-                    <li> Submit Timecards: <a target="_blank" href="https://www.paychex.com/login">Paychex Login</a></li>
+                    <li>
+                        Submit Timecards:{" "}
+                        <a
+                            target="_blank"
+                            href="https://www.paychex.com/login"
+                            className="text-blue-600 underline"
+                        >
+                            Paychex Login
+                        </a>
+                    </li>
               
                 </ul>
 
@@ -21,12 +30,12 @@ export default function StaffPage() {
             <ul className="list-disc ml-6">
               <li>
                 <a
-      href="/Employee_Handbook.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 underline"
-    >
-      Employee Handbook & HR Policies
+                        href="/Employee_Handbook.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                >
+                        Employee Handbook & HR Policies
     </a>
   </li>
  {/* <li>Payroll & Benefits Information (Link it here)</li> */}
