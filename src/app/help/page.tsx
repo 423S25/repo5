@@ -106,9 +106,33 @@ export default function HelpPage() {
               <p className="text-gray-500">No results found.</p>
             )}
           </div>
+          </div>
+          </div>
+          </div>
   
           {/* Additional Support */}
-          <h2 className="text-2xl font-semibold mt-6">Need More Help?</h2>
+          <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
           <p className="text-gray-700 mt-2">
             If you need further assistance, contact the HR department at{" "}
             <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.  
