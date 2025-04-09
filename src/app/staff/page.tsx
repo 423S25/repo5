@@ -104,8 +104,32 @@ export default function StaffPage() {
   </div>
 
 
-                {/* Contact Info */}
-                <h2 className="text-2xl font-semibold mt-6">📞 Need Help?</h2>
+    {/* Contact Info */}
+
+  <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">📞 Need Help?</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
+
+                
                 <p>If you need assistance, contact:</p>
                 <ul className="list-disc ml-6">
                     <li>HR Department: hr@hrdc.org</li>
@@ -114,6 +138,9 @@ export default function StaffPage() {
                 </ul>
             </div>
 
+            </div>
+            </div>
+            </div>
             </div>
             </div>
         </>
