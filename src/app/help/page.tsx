@@ -65,8 +65,30 @@ export default function HelpPage() {
             className="w-full p-2 border border-gray-300 rounded-lg mb-6"
           />
   
-          {/* FAQs Section */}
-          <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+           {/* FAQs Section */}
+         <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
+          
           <div className="space-y-4">
             {filteredFAQs.length > 0 ? (
               filteredFAQs.map((faq, index) => (
@@ -93,6 +115,9 @@ export default function HelpPage() {
             For urgent issues, please speak directly with your supervisor.
           </p>
         </div>
+      </div>
+      </div>
+      </div>
       </div>
       </div>
       </div>
