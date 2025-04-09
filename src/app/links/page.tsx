@@ -4,6 +4,26 @@ export default function LinksPage() {
   return (
     <>
       <NavBar /> {/* Navbar stays full width */}
+
+      <div 
+       style={{
+          width: "100%",
+          minHeight: "100vh",
+          background: "#003E52",
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "100px",
+        }}
+      >
+      <div 
+        style={{
+          width: 980, 
+          background: "white",
+          top: 0,
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
+          paddingBottom: "100px",
+          }}
+        >
      
       <div className="container mx-auto p-6"> 
         <h1 className="text-3xl font-bold mb-4">Important Links</h1>
@@ -25,6 +45,8 @@ export default function LinksPage() {
         <h2 className="text-2xl font-semibold mt-6">Need More Help?</h2>
         <p>Ask your supervisor for help accessing a link you need.</p>
         <p>Contact the HR department at <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.</p>
+      </div>
+      </div>
       </div>
     </>
   );
