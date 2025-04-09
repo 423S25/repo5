@@ -86,6 +86,31 @@ export default function LinksPage() {
       </div>
       </div>
 
+
+         {/* Important Links Listed */}
+         <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">WHAT'S NEW</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
+
         <h2 className="text-2xl font-semibold mt-6">Important Links</h2>
         <ul className="list-disc ml-6">
             <li className="mt-2">
@@ -98,6 +123,10 @@ export default function LinksPage() {
                 <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link">Central Files Cover Sheet Submission Form</a>
             </li>
         </ul>
+
+        </div>
+        </div>
+        </div>
         
         <h2 className="text-2xl font-semibold mt-6">Need More Help?</h2>
         <p>Ask your supervisor for help accessing a link you need.</p>
