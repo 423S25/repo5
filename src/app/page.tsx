@@ -32,9 +32,8 @@ export default function HomePageWrapper() {
       <div 
         style={{
           width: 980, 
+          height: "100%",
           background: "white",
-          top: 0,
-          left: 0,
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
           paddingBottom: "100px",
           }}
