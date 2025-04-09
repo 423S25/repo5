@@ -33,7 +33,6 @@ export default function HomePageWrapper() {
         style={{
           width: 980, 
           background: "white",
-          top: 0,
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
           paddingBottom: "100px",
           }}
@@ -44,9 +43,8 @@ export default function HomePageWrapper() {
       <div className="text-center mt-10">
       <div
           style={{
-            width: 800,
+            width: 980,
             background: "#A1A750",
-            borderRadius: 20,
             boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
             padding: 20,
             color: "white",
