@@ -25,9 +25,20 @@ export default function StaffPage() {
           }}
         >
         
-            <div className="container mx-auto p-6">
+        <div className="text-center mt-10">
+      <div
+          style={{
+            width: 980,
+            background: "#A1A750",
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
                 <h1 className="text-3xl font-bold">HRDC Staff Resources</h1>
                 <p>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
+        </div>
+        </div>
 
         {/* Employee Tasks */}
         <div className="flex justify-center mt-10">
@@ -138,7 +149,6 @@ export default function StaffPage() {
                 </ul>
             </div>
 
-            </div>
             </div>
             </div>
             </div>
