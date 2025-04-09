@@ -49,6 +49,17 @@ export default function HelpPage() {
 
       <div className="container mx-auto p-6">
         <div className="bg-white shadow-md p-6 rounded-lg">
+        
+        <div className="text-center mt-10">
+      <div
+          style={{
+            width: 980,
+            background: "#A1A750",
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
           <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">Help & Support</h1>
   
           {/* Intro Section */}
@@ -56,6 +67,9 @@ export default function HelpPage() {
             Welcome to the HRDC Intranet Help Center. This site is designed to make it easy for employees and volunteers to find important forms, announcements, and training materials.
           </p>
   
+          </div>
+          </div>
+          
           {/* Search Bar */}
           <input
             type="text"
