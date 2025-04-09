@@ -99,7 +99,7 @@ export default function LinksPage() {
             color: "white",
           }}
         >
-          <h2 className="text-2xl font-bold mb-4">WHAT'S NEW</h2>
+          <h2 className="text-2xl font-bold mb-4">Important Links</h2>
           <div
             style={{
               background: "white",
@@ -110,8 +110,6 @@ export default function LinksPage() {
               overflowY: "auto",
             }}
           >
-
-        <h2 className="text-2xl font-semibold mt-6">Important Links</h2>
         <ul className="list-disc ml-6">
             <li className="mt-2">
                 <a target="_blank" href="https://www.paychex.com/login">Timesheet Login</a>
@@ -127,10 +125,36 @@ export default function LinksPage() {
         </div>
         </div>
         </div>
+
+        {/* Need More Help Section */}
+      <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
         
-        <h2 className="text-2xl font-semibold mt-6">Need More Help?</h2>
         <p>Ask your supervisor for help accessing a link you need.</p>
         <p>Contact the HR department at <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.</p>
+      </div>
+      </div>
+      </div>
       </div>
       </div>
       </div>
