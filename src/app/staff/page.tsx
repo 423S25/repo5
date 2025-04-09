@@ -5,7 +5,7 @@ export default function StaffPage() {
         <>
             <NavBar />
 
-            <div 
+        <div 
        style={{
           width: "100%",
           minHeight: "100vh",
