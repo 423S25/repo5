@@ -29,12 +29,38 @@ export default function StaffPage() {
                 <h1 className="text-3xl font-bold">HRDC Staff Resources</h1>
                 <p>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
 
-                {/* Employee Tasks */}
-                <h2 className="text-2xl font-semibold mt-6"> Staff Actions</h2>
+        {/* Employee Tasks */}
+        <div className="flex justify-center mt-10">
+        <div
+          style={{
+            width: 800,
+            background: "#147278",
+            borderRadius: 20,
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+          <h2 className="text-2xl font-bold mb-4">Staff Actions</h2>
+          <div
+            style={{
+              background: "white",
+              color: "black",
+              borderRadius: 20,
+              padding: 20,
+              maxHeight: 400,
+              overflowY: "auto",
+            }}
+          >
+
+
                 <ul className="list-disc ml-6">
                     <li> Submit Timecards: <a target="_blank" href="https://www.paychex.com/login">Paychex Login</a></li>
               
                 </ul>
+            </div>
+            </div>
+            </div>
 
                 {/* HR  */}
             <h2 className="text-2xl font-semibold mt-6">HR Resources</h2>
