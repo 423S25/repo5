@@ -4,6 +4,26 @@ export default function StaffPage() {
     return (
         <>
             <NavBar />
+
+        <div 
+       style={{
+          width: "100%",
+          minHeight: "100vh",
+          background: "#003E52",
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "100px",
+        }}
+      >
+      <div 
+        style={{
+          width: 980, 
+          background: "white",
+          top: 0,
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
+          paddingBottom: "100px",
+          }}
+        >
         
             <div className="container mx-auto p-6">
                 <h1 className="text-3xl font-bold">HRDC Staff Resources</h1>
@@ -50,6 +70,9 @@ export default function StaffPage() {
                     <li>IT Support: support@hrdc.org</li>
                     
                 </ul>
+            </div>
+
+            </div>
             </div>
         </>
     );

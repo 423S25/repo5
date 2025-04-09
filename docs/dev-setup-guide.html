@@ -1,0 +1,58 @@
+<h1>HRDC Intranet Local Setup Guide</h1>
+
+<h2>Running the App Locally <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+
+<p>This section explains how developers can run the HRDC Intranet application locally for development or testing purposes.</p>
+
+<h3>System Requirements</h3>
+<ul>
+  <li><strong>Node.js version:</strong> The application requires <code>Node.js v18.20.7</code>. Other versions may lead to Firebase compatibility errors.</li>
+  <li><strong>Package Manager:</strong> npm is used for dependency management.</li>
+</ul>
+
+<h3>Initial Setup</h3>
+<ol>
+  <li>Install Node Version Manager (<code>nvm</code>) if not already installed. Instructions can be found <a href="https://github.com/nvm-sh/nvm" target="_blank">here</a>.</li>
+  <li>Run the following commands in your terminal:
+    <pre><code>nvm install 18.20.7
+nvm use 18.20.7</code></pre>
+  </li>
+  <li>Clone the project from GitHub:
+    <pre><code>git clone https://github.com/423S25/repo5.git
+cd repo5</code></pre>
+  </li>
+  <li>Install project dependencies:
+    <pre><code>npm install</code></pre>
+  </li>
+</ol>
+
+<h3>Firebase Configuration</h3>
+<p>Each developer must connect the app to their own Firebase project to use login and announcement features.</p>
+<ol>
+  <li>Create a Firebase project at <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>.</li>
+  <li>Enable <strong>Authentication</strong> (email/password and optionally Google).</li>
+  <li>Enable <strong>Firestore Database</strong>.</li>
+  <li>Create a web app in Firebase and copy the configuration object.</li>
+  <li>Create a file named <code>.env.local</code> in the root of the project and paste the configuration values in this format:</li>
+</ol>
+
+<pre><code>NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+</code></pre>
+
+<h3>Running the App</h3>
+<p>To start the development server, run:</p>
+<pre><code>npm run dev</code></pre>
+
+<p>This will launch the app at <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>.</p>
+
+<p><strong>Note:</strong> If the app fails to start or login throws errors, double-check that:</p>
+<ul>
+  <li>You are using Node.js version 18.20.7</li>
+  <li>Your <code>.env.local</code> file is present and contains valid Firebase keys</li>
+  <li>You have access to Firestore and Firebase Authentication in your Firebase project</li>
+</ul>
