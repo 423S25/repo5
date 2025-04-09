@@ -34,9 +34,22 @@ export default function LinksPage() {
           }}
         >
         
-      <div className="container mx-auto p-6"> 
+        <div className="text-center mt-10">
+      <div
+          style={{
+            width: 980,
+            background: "#A1A750",
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
+      
         <h1 className="text-3xl font-bold mb-4">Important Links</h1>
         <p>Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.</p>
+
+        </div>
+        </div>
        
                  {/* Search Prompt Section */}
       <div className="flex justify-center mt-10">
@@ -152,7 +165,6 @@ export default function LinksPage() {
         
         <p>Ask your supervisor for help accessing a link you need.</p>
         <p>Contact the HR department at <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.</p>
-      </div>
       </div>
       </div>
       </div>
