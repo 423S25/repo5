@@ -47,8 +47,8 @@ export default function HelpPage() {
           }}
         >
 
-      <div className="container mx-auto p-6">
-        <div className="bg-white shadow-md p-6 rounded-lg">
+      {/* <div className="container mx-auto p-6">
+        <div className="bg-white shadow-md p-6 rounded-lg"> */}
         
         <div className="text-center mt-10">
       <div
@@ -69,7 +69,7 @@ export default function HelpPage() {
   
           </div>
           </div>
-          
+
           {/* Search Bar */}
           <input
             type="text"
@@ -153,8 +153,6 @@ export default function HelpPage() {
             For urgent issues, please speak directly with your supervisor.
           </p>
         </div>
-      </div>
-      </div>
       </div>
       </div>
       </div>
