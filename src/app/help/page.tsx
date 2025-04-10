@@ -71,6 +71,27 @@ export default function HelpPage() {
           </div>
 
           {/* Search Bar */}
+
+        <div className="flex justify-center mt-10">
+        <div
+            style={{
+              width: 800,
+              background: "#147278",
+              borderRadius: 20,
+              boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+              padding: 20,
+              color: "white",
+            }}
+          >
+        <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+              <div
+                style={{
+                  background: "white",
+                  color: "black",
+                  borderRadius: 20,
+                  padding: 20,
+                }}
+              >
           <input
             type="text"
             placeholder="Search FAQs..."
@@ -78,6 +99,10 @@ export default function HelpPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full p-2 border border-gray-300 rounded-lg mb-6"
           />
+
+          </div>
+          </div>
+          </div>
   
            {/* FAQs Section */}
          <div className="flex justify-center mt-10">
