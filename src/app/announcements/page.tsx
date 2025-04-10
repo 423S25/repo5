@@ -135,8 +135,28 @@ export default function AnnouncementsPage() {
           }}
         >
 
-      <div className="container mx-auto p-6 max-w-xl">
-        <h1 className="text-3xl font-bold mb-4">Post New Announcement</h1>
+      <div className="flex justify-center mt-10">
+        <div
+            style={{
+              width: 800,
+              background: "#147278",
+              borderRadius: 20,
+              boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+              padding: 20,
+              color: "white",
+            }}
+          >
+        <h2 className="text-2xl font-bold mb-4">Post New Announcement</h2>
+              <div
+                style={{
+                  background: "white",
+                  color: "black",
+                  borderRadius: 20,
+                  padding: 20,
+                }}
+              >
+
+     
 
         {/* showing errors or success messages */}
         {error && <p className="text-red-500 mb-2">{error}</p>}
@@ -185,6 +205,8 @@ export default function AnnouncementsPage() {
             </li>
           ))}
         </ul>
+      </div>
+      </div>
       </div>
       </div>
       </div>
