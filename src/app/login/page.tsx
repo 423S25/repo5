@@ -41,6 +41,26 @@ export default function LoginPage() {
 
   return (
     
+    <div 
+       style={{
+          width: "100%",
+          minHeight: "100vh",
+          background: "#003E52",
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "100px",
+        }}
+      >
+      <div 
+        style={{
+          width: 980, 
+          height: "100%",
+          background: "white",
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
+          paddingBottom: "100px",
+          }}
+        >
+          
     <div className="flex flex-col items-center justify-center h-screen">
     
       <h1 className="text-2xl font-bold mb-4">Login</h1>
@@ -77,6 +97,8 @@ export default function LoginPage() {
       >
         Sign in with Google
       </button>
+    </div>
+    </div>
     </div>
   );
 }
