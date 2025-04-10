@@ -115,6 +115,26 @@ export default function AnnouncementsPage() {
     <>
       <NavBar />
 
+      <div 
+       style={{
+          width: "100%",
+          minHeight: "100vh",
+          background: "#003E52",
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "100px",
+        }}
+      >
+      <div 
+        style={{
+          width: 980, 
+          height: "100%",
+          background: "white",
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
+          paddingBottom: "100px",
+          }}
+        >
+
       <div className="container mx-auto p-6 max-w-xl">
         <h1 className="text-3xl font-bold mb-4">Post New Announcement</h1>
 
@@ -165,6 +185,8 @@ export default function AnnouncementsPage() {
             </li>
           ))}
         </ul>
+      </div>
+      </div>
       </div>
     </>
   );
