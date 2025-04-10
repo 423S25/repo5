@@ -60,6 +60,17 @@ export default function LoginPage() {
           paddingBottom: "100px",
           }}
         >
+
+      <div className="text-center mt-10">
+      <div
+          style={{
+            width: 980,
+            background: "#A1A750",
+            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+            padding: 20,
+            color: "white",
+          }}
+        >
           
     <div className="flex flex-col items-center justify-center h-screen">
     
@@ -97,6 +108,8 @@ export default function LoginPage() {
       >
         Sign in with Google
       </button>
+    </div>
+    </div>
     </div>
     </div>
     </div>
