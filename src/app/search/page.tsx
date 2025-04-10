@@ -62,6 +62,27 @@ function SearchResults() {
 
   return (
     <div>
+    
+    <div 
+       style={{
+          width: "100%",
+          minHeight: "100vh",
+          background: "#003E52",
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "100px",
+        }}
+      >
+      <div 
+        style={{
+          width: 980, 
+          height: "100%",
+          background: "white",
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
+          paddingBottom: "100px",
+          }}
+        >
+
       <h1 className="text-3xl font-bold mb-4">Search Results for: &quot;{query}&quot;</h1>
       {filteredResults.length > 0 ? (
         <ul className="list-disc ml-6">
@@ -74,6 +95,8 @@ function SearchResults() {
       ) : (
         <p className="text-gray-500">No results found.</p>
       )}
+    </div>
+    </div>
     </div>
   );
 }
