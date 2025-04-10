@@ -1,5 +1,6 @@
 "use client";
 
+import { NavBar } from "../components/Navbar";
 import { useState } from "react";
 import {
   signInWithEmailAndPassword,
@@ -40,6 +41,8 @@ export default function LoginPage() {
   };
 
   return (
+    <div>
+      <NavBar />
     
     <div 
        style={{
@@ -108,6 +111,7 @@ export default function LoginPage() {
       >
         Sign in with Google
       </button>
+    </div>
     </div>
     </div>
     </div>
