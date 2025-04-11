@@ -30,6 +30,7 @@ export default function LinksPage() {
       >
         {/* inner white box that holds all content */}
         <div 
+          className="link-style" // added to apply blue/underline to links only here
           style={{
             width: 980, 
             background: "white",
@@ -181,6 +182,15 @@ export default function LinksPage() {
 
         </div>
       </div>
+       {/* links are underlined on this page */}
+      {/* only this page gets these styles */}
+      <style jsx>{`
+        .link-style a {
+          color: #1a0dab;
+          text-decoration: underline;
+        }
+      `}</style>
+
     </>
   );
 }
