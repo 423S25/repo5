@@ -1,56 +1,59 @@
-"use client";
-import Link from "next/link";
+"use client"; // tells Next.js this runs on the client side (browser)
+
+import Link from "next/link"; // for internal navigation without full reloads
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { auth } from "@/firebaseConfig";
+import { useRouter } from "next/navigation"; // lets us navigate in code
+import { auth } from "@/firebaseConfig"; // Firebase auth setup
+import { onAuthStateChanged, signOut } from "firebase/auth"; // for login/logout handling
 
-import { onAuthStateChanged, signOut } from "firebase/auth";
-
+// this is the main navigation bar that shows up on every page
 export const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchText, setSearchText] = useState("");
-  const [user, setUser] = useState<any>(null);
+  const [isOpen, setIsOpen] = useState(false); // controls mobile dropdown
+  const [searchText, setSearchText] = useState(""); // search bar input
+  const [user, setUser] = useState<any>(null); // holds the logged-in user info
   const router = useRouter();
 
-  // Track user authentication state
+  // runs when component loads → checks if someone is logged in
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("PRODUCTION NAVBAR: User is now:", currentUser?.email); // 👈 Add this line
-      setUser(currentUser);
+      console.log("PRODUCTION NAVBAR: User is now:", currentUser?.email); 
+      setUser(currentUser); // update local user state
     });
-    return () => unsubscribe();
+    return () => unsubscribe(); // clean up when unmounting
   }, []);
   
-  // Logout function
+  // handles logout → clears auth and redirects to homepage
   const handleLogout = async () => {
     await signOut(auth);
-    router.push("/"); // Redirect to login after logout
+    router.push("/"); // go back to homepage
   };
 
   return (
     <nav className="navbar text-white p-4 sm:p-6 md:flex md:justify-between md:items-center">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo & Site Name */}
+
+        {/* HRDC logo and title */}
         <Link href="/" className="flex items-center">
           <img src="/logo.png" alt="HRDC Logo" className="h-10 w-auto mr-3" />
           <span className="text-2xl font-bold">HRDC Intranet</span>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
+          {/* regular links */}
           <Link href="/" className="mx-2 hover:text-gray-300">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
 
-          {/* Show "Manage Announcements" only for admin */}
+          {/* only show admin tools to admin user */}
           {user?.email === "admin@hrdc.com" && (
             <Link href="/announcements" className="mx-2 underline text-yellow-300">
               Manage Announcements
             </Link>
           )}
 
-          {/* Search Form */}
+          {/* search form (desktop) */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -70,7 +73,7 @@ export const NavBar = () => {
             <button type="submit" className="ml-2 text-gray-700">🔍</button>
           </form>
 
-          {/* Login / Logout Button */}
+          {/* shows Login if user not logged in, Logout if they are */}
           {user ? (
             <button
               onClick={handleLogout}
@@ -86,7 +89,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Button to open/close mobile menu */}
       <div className="md:hidden flex items-center">
         <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
           <svg
@@ -95,6 +98,7 @@ export const NavBar = () => {
             fill="none" viewBox="0 0 24 24"
             stroke="currentColor"
           >
+            {/* toggles between hamburger icon and X icon */}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -105,22 +109,23 @@ export const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Dropdown menu for mobile */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-gray-800 py-4">
+          {/* same links as desktop version */}
           <Link href="/" className="block py-2 hover:text-gray-300">Home</Link>
           <Link href="/staff" className="block py-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="block py-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="block py-2 hover:text-gray-300">Links</Link>
 
-          {/* Show "Manage Announcements" only for admin */}
+          {/* admin-only menu item */}
           {user?.email === "admin@hrdc.com" && (
             <Link href="/announcements" className="block py-2 text-yellow-300">
               Manage Announcements
             </Link>
           )}
 
-          {/* Search Form in Mobile Menu */}
+          {/* search bar (mobile version) */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -140,7 +145,7 @@ export const NavBar = () => {
             <button type="submit" className="ml-2 text-gray-700">🔍</button>
           </form>
 
-          {/* Login / Logout Button for Mobile */}
+          {/* login/logout button (mobile) */}
           {user ? (
             <button
               onClick={handleLogout}
