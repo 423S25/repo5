@@ -146,7 +146,7 @@ export default function StaffPage() {
                 <ul className="list-disc ml-6">
                   <li>
                     Submit Timecards:{" "}
-                    <a target="_blank" href="https://www.paychex.com/login">
+                    <a target="_blank" href="https://www.paychex.com/login" className="text-blue-600 underline">
                       Paychex Login
                     </a>
                   </li>
