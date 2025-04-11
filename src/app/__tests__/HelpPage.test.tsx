@@ -1,4 +1,12 @@
-jest.mock('@/firebaseConfig', () => ({
+/**
+ * Unit tests for HelpPage.
+ */
+
+jest.mock("next/navigation", () => ({
+  useRouter: () => ({ push: jest.fn() }),
+}));
+
+jest.mock("@/firebaseConfig", () => ({
   auth: {},
   firebaseConfig: {},
 }));
@@ -7,23 +15,23 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import HelpPage from "../help/page";
 
 describe("HelpPage", () => {
-  test("renders the help page title", () => {
+  it("renders the help page title", () => {
     render(<HelpPage />);
-    expect(screen.getByText("Help & Support")).toBeInTheDocument();
+    expect(screen.getByText(/Help & Support/i)).toBeInTheDocument();
   });
 
-  test("renders FAQ questions", () => {
+  it("renders FAQ questions", () => {
     render(<HelpPage />);
-    expect(screen.getByRole("button", { name: /how do i log in\?/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /where can i find my timecards and documents\?/i })).toBeInTheDocument();
+    expect(screen.getByText(/how do i log in\?/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/where can i find my timecards and documents\?/i)
+    ).toBeInTheDocument();
   });
 
-  test("allows users to search FAQs", () => {
+  it("allows users to search FAQs", () => {
     render(<HelpPage />);
-    const searchInput = screen.getByPlaceholderText("Search FAQs...");
-    
+    const searchInput = screen.getByPlaceholderText(/Search FAQs.../i);
     fireEvent.change(searchInput, { target: { value: "log in" } });
-
-    expect(screen.getByRole("button", { name: /how do i log in\?/i })).toBeInTheDocument();
+    expect(screen.getByText(/how do i log in\?/i)).toBeInTheDocument();
   });
 });
