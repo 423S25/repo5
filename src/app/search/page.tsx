@@ -11,12 +11,13 @@ import { NavBar } from "../components/Navbar";
  */
 const allData = [
   { title: "How do I log in?", content: "Click the 'Login' button at the top of the page and enter your username and password." },
-  { title: "Where can I find my timecards and documents?", content: "Use the search bar to look for forms or browse the 'Staff' section for timecards, W-2 forms, and training documents." },
+  { title: "Where can I find my timecards and documents?", content: "Use the search bar to look for forms or browse the 'Staff' section for timecards." },
   { title: "How do I know when timecards are due?", content: "Check the 'Home' page for announcements about due dates and upcoming deadlines." },
   { title: "How do I use the search bar?", content: "Type keywords related to the document you need, and the system will suggest relevant forms from the HRDC Google Drive." },
   { title: "Who do I contact if I need help?", content: "For technical issues, contact support at support@hrdc.org. For HR-related questions, speak with your supervisor." },
   { title: "Timesheet Login", content: "Access your timecard at https://www.paychex.com/login" },
-  { title: "Announcements", content: "Log in as admin to post Announcements." },
+  { title: "Announcements", content: "Log in as admin to post or delete Announcements." },
+  { title: "Employee Handbook", content: "You can download the Employee Handbook & HR Policies from the Staff Resources page" }
 ];
 
 /**
