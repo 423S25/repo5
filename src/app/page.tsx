@@ -14,6 +14,14 @@ const monsterrat = Montserrat({
   display: 'swap',
 });
 
+const monsterratBold = Montserrat({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+
+
 
 
 // this is the homepage component
@@ -69,7 +77,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className={`${monsterrat.className}`}>HRDC Intranet</h2>
+              <h2 className={`${monsterratBold.className}`}>HRDC Intranet</h2>
               <p className={`${monsterrat.className}`}>
                 Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
               </p>
@@ -88,7 +96,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+              <h2 className={`${monsterratBold.className}`}>What can we help you find today?</h2>
               <div
                 style={{
                   background: "white",
@@ -182,7 +190,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">WHAT'S NEW</h2>
+              <h2 className={`${monsterratBold.className}`}>WHAT'S NEW</h2>
               <div
                 style={{
                   background: "white",
@@ -193,18 +201,18 @@ export default function HomePageWrapper() {
                   overflowY: "auto",
                 }}
               >
-                <h3 className="text-xl font-semibold mb-4">Announcements</h3>
+                <h3 className={`${monsterratBold.className}`}>Announcements</h3>
                 {/* if no announcements show fallback message */}
                 {announcements.length === 0 ? (
-                  <p className="text-gray-600">No new announcements.</p>
+                  <p className={`${monsterrat.className}`}>No new announcements.</p>
                 ) : (
                   <ul>
                     {/* show list of announcements from firebase */}
                     {announcements.map((a: any) => (
-                      <li key={a.id} className="mb-4 border-b pb-2">
-                        <h4 className="text-lg font-semibold">{a.title}</h4>
+                      <li key={a.id} className={`${monsterrat.className}`}>
+                        <h4 className={`${monsterratBold.className}`}>{a.title}</h4>
                         <p>{a.content}</p>
-                        <p className="text-sm text-gray-500 mt-1">Posted by {a.author}</p>
+                        <p className={`${monsterrat.className}`}>Posted by {a.author}</p>
                       </li>
                     ))}
                   </ul>
@@ -225,7 +233,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">CALENDAR</h2>
+              <h2 className={`${monsterratBold.className}`}>CALENDAR</h2>
               <div
                 style={{
                   background: "white",
@@ -242,7 +250,7 @@ export default function HomePageWrapper() {
                   style={{ border: "1px solid #777" }}
                   width="750"
                   height="750"
-                  className="rounded shadow-lg"
+                  className={`${monsterratBold.className}`}
                   title="HRDC Calendar"
                 ></iframe>
               </div>
