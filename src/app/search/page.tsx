@@ -6,6 +6,20 @@ import { useSearchParams } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import { NavBar } from "../components/Navbar";
 
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 /**
  * Static array of help topics and links that the user can search.
  */
@@ -35,7 +49,7 @@ export default function SearchPage() {
     <>
       <NavBar />
       <div className="container mx-auto p-6">
-        <Suspense fallback={<p className="text-gray-500">Loading search results...</p>}>
+        <Suspense fallback={<p className={`${monsterrat.className}`}>Loading search results...</p>}>
           <SearchResults />
         </Suspense>
       </div>
@@ -95,7 +109,7 @@ function SearchResults() {
               color: "white",
             }}
           >
-        <h2 className="text-2xl font-bold mb-4">HRDC Search</h2>
+        <h2 className={`${monsterratBold.className}`}>HRDC Search</h2>
               <div
                 style={{
                   background: "white",
@@ -105,19 +119,19 @@ function SearchResults() {
                 }}
               >
 
-      <h1 className="text-3xl font-bold mb-4">Search Results for: &quot;{query}&quot;</h1>
+      <h1 className={`${monsterrat.className}`}>Search Results for: &quot;{query}&quot;</h1>
 
 
       {filteredResults.length > 0 ? (
         <ul className="list-disc ml-6">
           {filteredResults.map((item, index) => (
-            <li key={index} className="mt-2">
+            <li key={index} className={`${monsterrat.className}`}>
               <strong>{item.title}:</strong> {item.content}
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-gray-500">No results found.</p>
+        <p className={`${monsterratBold.className}`}>No results found.</p>
       )}
     </div>
     </div>

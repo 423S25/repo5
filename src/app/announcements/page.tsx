@@ -21,6 +21,21 @@ import { onAuthStateChanged } from "firebase/auth";
 import { NavBar } from "../components/Navbar";
 import { getApp, getApps, initializeApp } from "firebase/app";
 
+
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 // make sure we only initialize firebase once
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);

@@ -14,6 +14,20 @@ import {
 import { auth } from "@/firebaseConfig";
 import { useRouter } from "next/navigation";
 
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");      // email state
@@ -79,7 +93,7 @@ export default function LoginPage() {
               }}
             >
               <div className="flex flex-col items-center justify-center h-screen">
-                <h1 className="text-2xl font-bold mb-4">Login</h1>
+                <h1 className={`${monsterratBold.className}`}>Login</h1>
                 {error && <p className="text-red-500 mb-4">{error}</p>}
 
                 {/* login form */}
@@ -87,14 +101,14 @@ export default function LoginPage() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="border p-2 text-black placeholder-gray-600"
+                    className={`${monsterrat.className}`}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     type="password"
                     placeholder="Password"
-                    className="border p-2 text-black placeholder-gray-600"
+                    className={`${monsterrat.className}`}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
@@ -106,18 +120,18 @@ export default function LoginPage() {
                 {/* forgot link = more clear now */}
                 <a
                   href="#"
-                  className="text-blue-200 underline hover:text-white mt-2"
+                  className={`${monsterrat.className}`}
                 >
                   Forgot your password?
                 </a>
 
                 {/* divider */}
-                <div className="my-4 text-white">OR</div>
+                <div className={`${monsterrat.className}`}>OR</div>
 
                 {/* google button */}
                 <button
                   onClick={handleGoogleLogin}
-                  className="bg-red-500 text-white px-6 py-2 rounded"
+                  className="{`${monsterratBold.className}`}"
                 >
                   Sign in with Google
                 </button>
