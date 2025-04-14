@@ -9,13 +9,13 @@ import { useState, useEffect } from "react"; // react hooks
 import { Montserrat } from 'next/font/google';
 
 const monsterrat = Montserrat({
-  weight: '400',
+  weight: '600',
   subsets: ['latin'],
   display: 'swap',
 });
 
 const monsterratBold = Montserrat({
-  weight: '700',
+  weight: '900',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -160,6 +160,7 @@ export default function HomePageWrapper() {
                   style={{
                     width: 700, 
                     height: 100, 
+                    fontFamily: "Montserrat",
                     background: "#147278",
                     boxShadow: "0px 4px 4px 2px rgba(0, 0, 0, 0.30)",
                     borderRadius: 50,
