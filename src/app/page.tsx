@@ -6,6 +6,16 @@ import { getAnnouncements } from "@/utils/getAnnouncements"; // fetches announce
 import { useRouter } from "next/navigation"; // lets us redirect programmatically
 import { useState, useEffect } from "react"; // react hooks
 
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+
+
 // this is the homepage component
 export default function HomePageWrapper() {
   // this sets up state for search input
@@ -59,8 +69,8 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className="text-3xl font-bold mb-4">HRDC Intranet</h2>
-              <p className="text-gray-600 mt-2">
+              <h2 className={`${monsterrat.className}`}>HRDC Intranet</h2>
+              <p className={`${monsterrat.className}`}>
                 Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
               </p>
             </div>
