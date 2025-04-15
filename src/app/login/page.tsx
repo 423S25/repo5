@@ -14,15 +14,16 @@ import {
 import { auth } from "@/firebaseConfig";
 import { useRouter } from "next/navigation";
 
+// Google Font
 import { Montserrat } from 'next/font/google';
 
-const monsterrat = Montserrat({
+const montserrat = Montserrat({
   weight: '600',
   subsets: ['latin'],
   display: 'swap',
 });
 
-const monsterratBold = Montserrat({
+const montserratBold = Montserrat({
   weight: '900',
   subsets: ['latin'],
   display: 'swap',
@@ -30,17 +31,17 @@ const monsterratBold = Montserrat({
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("");      // email state
-  const [password, setPassword] = useState(""); // password state
-  const [error, setError] = useState("");       // error msg
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   // handle normal login
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await setPersistence(auth, browserLocalPersistence); // keeps session
-      await signInWithEmailAndPassword(auth, email, password); // logs in
-      router.push("/"); // go to homepage
+      await setPersistence(auth, browserLocalPersistence);
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push("/");
     } catch (err: any) {
       setError(err.message);
     }
@@ -51,7 +52,7 @@ export default function LoginPage() {
     const provider = new GoogleAuthProvider();
     try {
       await setPersistence(auth, browserLocalPersistence);
-      await signInWithPopup(auth, provider); // login w/ google
+      await signInWithPopup(auth, provider);
       router.push("/");
     } catch (err: any) {
       setError(err.message);
@@ -62,12 +63,11 @@ export default function LoginPage() {
     <div>
       <NavBar />
 
-      {/* full page bg */}
       <div
         style={{
           width: "100%",
           minHeight: "100vh",
-          background: "#003E52", // dark blue bg
+          background: "#003E52",
           display: "flex",
           justifyContent: "center",
           paddingTop: "100px",
@@ -86,14 +86,14 @@ export default function LoginPage() {
             <div
               style={{
                 width: 980,
-                background: "#A1A750", // 💛 your yellowish green background
+                background: "#A1A750",
                 boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
                 padding: 20,
                 color: "white",
               }}
             >
               <div className="flex flex-col items-center justify-center h-screen">
-                <h1 className={`${monsterratBold.className}`}>Login</h1>
+                <h1 className={`${montserratBold.className} text-2xl mb-4`}>Login</h1>
                 {error && <p className="text-red-500 mb-4">{error}</p>}
 
                 {/* login form */}
@@ -101,37 +101,40 @@ export default function LoginPage() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className={`${monsterrat.className}`}
+                    className={`${montserrat.className} border p-2 text-black placeholder-gray-600`}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     type="password"
                     placeholder="Password"
-                    className={`${monsterrat.className}`}
+                    className={`${montserrat.className} border p-2 text-black placeholder-gray-600`}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+                  <button
+                    type="submit"
+                    className={`${montserratBold.className} bg-blue-500 text-white p-2 rounded`}
+                  >
                     Login
                   </button>
                 </form>
 
-                {/* forgot link = more clear now */}
+                {/* forgot link */}
                 <a
                   href="#"
-                  className={`${monsterrat.className}`}
+                  className={`${montserrat.className} text-blue-200 underline hover:text-white mt-2`}
                 >
                   Forgot your password?
                 </a>
 
                 {/* divider */}
-                <div className={`${monsterrat.className}`}>OR</div>
+                <div className={`${montserrat.className} my-4 text-white`}>OR</div>
 
                 {/* google button */}
                 <button
                   onClick={handleGoogleLogin}
-                  className="{`${monsterratBold.className}`}"
+                  className={`${montserratBold.className} bg-red-500 text-white px-6 py-2 rounded`}
                 >
                   Sign in with Google
                 </button>
