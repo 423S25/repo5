@@ -3,6 +3,20 @@
 import { useState } from "react"; // react hook for keeping track of changes in the component
 import { NavBar } from "../components/Navbar"; // brings in the top navigation bar
 
+import { Montserrat } from 'next/font/google';
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+
 // this is the main help page component
 export default function HelpPage() {
 
@@ -86,8 +100,8 @@ export default function HelpPage() {
                 color: "white",
               }}
             >
-              <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">Help & Support</h1>
-              <p className="text-gray-700 text-lg text-center mb-6">
+              <h1 className={`${monsterratBold.className}`}>Help & Support</h1>
+              <p className={`${monsterrat.className}`}>
                 Welcome to the HRDC Intranet Help Center. This site is designed to make it easy for employees and volunteers to find important forms, announcements, and training materials.
               </p>
             </div>
@@ -105,7 +119,7 @@ export default function HelpPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+              <h2 className={`${monsterratBold.className}`}>What can we help you find today?</h2>
               <div
                 style={{
                   background: "white",
@@ -137,7 +151,7 @@ export default function HelpPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className={`${monsterratBold.className}`}>Frequently Asked Questions</h2>
               <div
                 style={{
                   background: "white",
@@ -155,15 +169,15 @@ export default function HelpPage() {
                         {/* clicking this opens and closes the answer */}
                         <button
                           onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                          className="w-full text-left font-semibold text-gray-700"
+                          className={`${monsterrat.className}`}
                         >
                           {faq.question} {openFAQ === index ? "▲" : "▼"}
                         </button>
-                        {openFAQ === index && <p className="mt-2 text-gray-600">{faq.answer}</p>}
+                        {openFAQ === index && <p className={`${monsterrat.className}`}>{faq.answer}</p>}
                       </div>
                     ))
                   ) : (
-                    <p className="text-gray-500">No results found.</p>
+                    <p className={`${monsterratBold.className}`}>No results found.</p>
                   )}
                 </div>
               </div>
@@ -182,7 +196,7 @@ export default function HelpPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+              <h2 className={`${monsterratBold.className}`}>Need More Help?</h2>
               <div
                 style={{
                   background: "white",
@@ -193,7 +207,7 @@ export default function HelpPage() {
                   overflowY: "auto",
                 }}
               >
-                <p className="text-gray-700 mt-2">
+                <p className={`${monsterrat.className}`}>
                   If you need further assistance, contact the HR department at{" "}
                   <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.  
                   For urgent issues, please speak directly with your supervisor.
