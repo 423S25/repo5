@@ -75,7 +75,7 @@ export const NavBar = () => {
 
           {/* shows Login if user not logged in, Logout if they are */}
           {user ? (
-            <button
+            <button aria-label= "Logout" 
               onClick={handleLogout}
               className="ml-4 bg-red-500 px-4 py-2 rounded"
             >
