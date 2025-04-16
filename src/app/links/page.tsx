@@ -6,6 +6,20 @@ import { NavBar } from "../components/Navbar"; // Navigation bar component
 import { useRouter } from "next/navigation"; // Router hook for navigation
 import { useState } from "react"; // React hook for state management
 
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 // Define the LinksPage component
 export default function LinksPage() {
   const [searchText, setSearchText] = useState(""); // State to store the search input
@@ -47,8 +61,8 @@ export default function LinksPage() {
           {/* Content container */}
           <div className="container mx-auto p-6">
             {/* Page title */}
-            <h1 className="text-3xl font-bold mb-4 text-center">Important Links</h1>
-            <p className="text-center">
+            <h1 className={`${monsterratBold.className}`}>Important Links</h1>
+            <p className={`${monsterrat.className}`}>
               Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.
             </p>
 
@@ -64,7 +78,7 @@ export default function LinksPage() {
                   color: "white", // Text color
                 }}
               >
-                <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+                <h2 className={`${monsterratBold.className}`}>What can we help you find today?</h2>
                 <div
                   style={{
                     background: "white", // Background color for the input container
@@ -84,7 +98,7 @@ export default function LinksPage() {
                     />
                     <button
                       type="submit"
-                      className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
+                      className="ml-2 bg-[#147278] text-white {`${monsterratBold.className}`} px-4 py-2 rounded"
                     >
                       Search
                     </button>
@@ -105,7 +119,7 @@ export default function LinksPage() {
                   color: "white", // Text color
                 }}
               >
-                <h2 className="text-2xl font-bold mb-4">Important Links</h2>
+                <h2 className={`${monsterratBold.className}`}>Important Links</h2>
                 <div
                   style={{
                     background: "white", // Background color for the links list
@@ -118,8 +132,8 @@ export default function LinksPage() {
                 >
                   {/* List of important links */}
                   <ul className="list-disc ml-6">
-                    <li className="mt-2">
-                      <a
+                    <li className={`${monsterratBold.className}`}>
+                      <a 
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.paychex.com/login"
@@ -165,7 +179,7 @@ export default function LinksPage() {
                   color: "white", // Text color
                 }}
               >
-                <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+                <h2 className="text-2xl font-bold mb-4">{`${monsterratBold.className}`}</h2>
                 <div
                   style={{
                     background: "white", // Background color for the help text
@@ -177,8 +191,8 @@ export default function LinksPage() {
                   }}
                 >
                   {/* Help text */}
-                  <p>Ask your supervisor for help accessing a link you need.</p>
-                  <p>
+                  <p className={`${monsterrat.className}`}>Ask your supervisor for help accessing a link you need.</p>
+                  <p className = {`${monsterrat.className}`}>
                     Contact the HR department at{" "}
                     <a href="mailto:support@hrdc.org" className="text-blue-500">
                       support@hrdc.org
