@@ -1,254 +1,171 @@
-"use client"; // tells Next.js this page uses client-side rendering
+"use client"; // Indicates this is a client-side rendered component
+export const dynamic = "force-dynamic"; // Forces dynamic rendering for this page
 
-export const dynamic = "force-dynamic"; // makes sure the page always renders fresh
+// Import necessary components and hooks
+import { NavBar } from "../components/Navbar"; // Navigation bar component
+import { getAnnouncements } from "@/utils/getAnnouncements"; // Utility function (not used in this code)
+import { useRouter } from "next/navigation"; // Router hook for navigation
+import { useState, useEffect } from "react"; // React hooks for state and lifecycle management
 
-// importing components and hooks we need
-import { NavBar } from "../components/Navbar"; // top nav menu
-import { getAnnouncements } from "@/utils/getAnnouncements"; // I think not used here - I think it stayed here by accident
-import { useRouter } from "next/navigation"; // helps with redirecting/searching
-import { useState, useEffect } from "react"; // React hooks
-
-import { Montserrat } from 'next/font/google';
-
-const monsterrat = Montserrat({
-  weight: '600',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const monsterratBold = Montserrat({
-  weight: '900',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-// main function that shows the Links page
+// Define the LinksPage component
 export default function LinksPage() {
-  const [searchText, setSearchText] = useState(""); // state for what user types in search box
-  const router = useRouter(); // so we can redirect to the search page when they search
+  const [searchText, setSearchText] = useState(""); // State to store the search input
+  const router = useRouter(); // Router instance for navigation
 
   return (
     <>
-      <NavBar /> {/*  same across pages */}
+      {/* Render the navigation bar */}
+      <NavBar />
 
-      {/* outer wrapper for background and centering */}
+      {/* Main container for the page */}
       <div 
-       style={{
+        style={{
           width: "100%",
-          minHeight: "100vh", // makes sure it fills full screen
-          background: "#003E52", // dark teal bg
+          minHeight: "100vh",
+          background: "#003E52", // Background color for the page
           display: "flex",
-          justifyContent: "center",
-          paddingTop: "100px",
+          justifyContent: "center", // Center content horizontally
+          paddingTop: "100px", // Add space at the top
         }}
       >
-        {/* inner white box that holds all content */}
+        {/* Inner container for the content */}
         <div 
-          className="link-style" // added to apply blue/underline to links only here
           style={{
-            width: 980, 
-            background: "white",
+            width: 980, // Fixed width for the content box
+            background: "white", // White background for the content box
             top: 0,
-            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset",
-            paddingBottom: "100px",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset", // Add an inset shadow
+            paddingBottom: "100px", // Add space at the bottom
           }}
         >
-<<<<<<< HEAD
-        
-      <div className="container mx-auto p-6"> 
-        <h1 className="text-3xl font-bold mb-4 text-center">Important Links</h1>
-        <p>Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.</p>
-=======
-          {/* header section with page title and intro */}
-          <div className="text-center mt-10">
-            <div
-              style={{
-                width: 980,
-                background: "#A1A750", // green header bg
-                boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
-                padding: 20,
-                color: "white",
-              }}
-            >
-              <h1 className={`${monsterratBold.className}`}>Important Links</h1>
-              <p className={`${monsterrat.className}`}>Welcome to the Important Links Page. Here you'll find links to websites you need to access often.</p>
-            </div>
-          </div>
->>>>>>> 7145757c053c29517d2f6b6d74294032aad215d2
+          {/* Content container with padding */}
+          <div className="container mx-auto p-6"> 
+            {/* Page title */}
+            <h1 className="text-3xl font-bold mb-4 text-center">Important Links</h1>
+            <p>Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.</p>
        
-          {/* search bar section */}
-          <div className="flex justify-center mt-10">
-            <div
-              style={{
-                width: 800,
-                background: "#147278", // darker green bg for box
-                borderRadius: 20,
-                boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
-                padding: 20,
-                color: "white",
-              }}
-            >
-              <h2 className={`${monsterratBold.className}`}>What can we help you find today?</h2>
+            {/* Search Prompt Section */}
+            <div className="flex justify-center mt-10">
               <div
                 style={{
-                  background: "white",
-                  color: "black",
-                  borderRadius: 20,
-                  padding: 20,
+                  width: 800, // Width of the search box
+                  background: "#147278", // Background color for the search box
+                  borderRadius: 20, // Rounded corners
+                  boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)", // Add a shadow
+                  padding: 20, // Padding inside the box
+                  color: "white", // Text color
                 }}
               >
-                {/* form handles the search input */}
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault(); // stops the page from refreshing
-                    if (searchText.trim() !== "") {
-                      router.push(`/search?query=${searchText}`); // send to search page with query
-                    }
+                <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+                <div
+                  style={{
+                    background: "white", // Background color for the input container
+                    color: "black", // Text color
+                    borderRadius: 20, // Rounded corners
+                    padding: 20, // Padding inside the container
                   }}
-                  className="flex items-center"
                 >
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="border border-gray-300 rounded px-4 py-2 w-full text-black"
-                    value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)} // update search text when typed
-                  />
-                  <button
-                    type="submit"
-                    className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
+                  {/* Search form */}
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault(); // Prevent default form submission
+                      if (searchText.trim() !== "") {
+                        router.push(`/search?query=${searchText}`); // Navigate to the search results page
+                      }
+                    }}
+                    className="flex items-center"
                   >
-                    Search
-                  </button>
-                </form>
+                    {/* Search input */}
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="border border-gray-300 rounded px-4 py-2 w-full text-black"
+                      value={searchText} // Bind input value to state
+                      onChange={(e) => setSearchText(e.target.value)} // Update state on input change
+                    />
+                    {/* Search button */}
+                    <button
+                      type="submit"
+                      className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* actual list of important links */}
-          <div className="flex justify-center mt-10">
-            <div
-              style={{
-                width: 800,
-                background: "#147278",
-                borderRadius: 20,
-                boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
-                padding: 20,
-                color: "white",
-              }}
-            >
-              <h2 className={`${monsterratBold.className}`}>Important Links</h2>
+            {/* Important Links Section */}
+            <div className="flex justify-center mt-10">
               <div
                 style={{
-                  background: "white",
-                  color: "black",
-                  borderRadius: 20,
-                  padding: 20,
-                  maxHeight: 400,
-                  overflowY: "auto", // scroll if too long
+                  width: 800, // Width of the links container
+                  background: "#147278", // Background color for the links container
+                  borderRadius: 20, // Rounded corners
+                  boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)", // Add a shadow
+                  padding: 20, // Padding inside the container
+                  color: "white", // Text color
                 }}
               >
-                <ul className="list-disc ml-6">
-                  <li className="mt-2">
-                    <a className= {`${monsterrat.className}`} target="_blank" href="https://www.paychex.com/login">Timesheet Login</a>
-                  </li>
-                  <li>
-                    <a  className= {`${monsterrat.className}`} target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfN0Ju3jDKo3sLZPYz9IE93lLBKIG_SGxC7qsbcyCnT9_fR2w/viewform?usp=sf_link">
-                      New Hire Information Request
-                    </a>
-                  </li>
-                  <li>
-                    <a className= {`${monsterrat.className}`} target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link">
-                      Central Files Cover Sheet Submission Form
-                    </a>
-                  </li>
-                </ul>
+                <h2 className="text-2xl font-bold mb-4">Important Links</h2>
+                <div
+                  style={{
+                    background: "white", // Background color for the links list
+                    color: "black", // Text color
+                    borderRadius: 20, // Rounded corners
+                    padding: 20, // Padding inside the list
+                    maxHeight: 400, // Maximum height for the list
+                    overflowY: "auto", // Enable vertical scrolling if content overflows
+                  }}
+                >
+                  {/* List of important links */}
+                  <ul className="list-disc ml-6">
+                    <li className="mt-2">
+                      <a target="_blank" rel="noopener noreferrer" href="https://www.paychex.com/login" className="text-blue-500 underline">Timesheet Login</a>
+                    </li>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfN0Ju3jDKo3sLZPYz9IE93lLBKIG_SGxC7qsbcyCnT9_fR2w/viewform?usp=sf_link" className="text-blue-500 underline">New Hire Information Request</a>
+                    </li>
+                    <li>
+                      <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link" className="text-blue-500 underline">Central Files Cover Sheet Submission Form</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-<<<<<<< HEAD
-         {/* Important Links Listed */}
-         <div className="flex justify-center mt-10">
-        <div
-          style={{
-            width: 800,
-            background: "#147278",
-            borderRadius: 20,
-            boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
-            padding: 20,
-            color: "white",
-          }}
-        >
-          <h2 className="text-2xl font-bold mb-4">Important Links</h2>
-          <div
-            style={{
-              background: "white",
-              color: "black",
-              borderRadius: 20,
-              padding: 20,
-              maxHeight: 400,
-              overflowY: "auto",
-            }}
-          >
-        <ul className="list-disc ml-6">
-            <li className="mt-2">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.paychex.com/login" className="text-blue-500 underline">Timesheet Login</a>
-            </li>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfN0Ju3jDKo3sLZPYz9IE93lLBKIG_SGxC7qsbcyCnT9_fR2w/viewform?usp=sf_link" className="text-blue-500 underline">New Hire Information Request</a>
-            </li>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link" className="text-blue-500 underline">Central Files Cover Sheet Submission Form</a>
-            </li>
-        </ul>
-=======
-          {/* final support section */}
-          <div className="flex justify-center mt-10">
-            <div
-              style={{
-                width: 800,
-                background: "#147278",
-                borderRadius: 20,
-                boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
-                padding: 20,
-                color: "white",
-              }}
-            >
-              <h2 className={`${monsterratBold.className}`}>Need More Help?</h2>
+            {/* Need More Help Section */}
+            <div className="flex justify-center mt-10">
               <div
                 style={{
-                  background: "white",
-                  color: "black",
-                  borderRadius: 20,
-                  padding: 20,
-                  maxHeight: 400,
-                  overflowY: "auto",
+                  width: 800, // Width of the help container
+                  background: "#147278", // Background color for the help container
+                  borderRadius: 20, // Rounded corners
+                  boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)", // Add a shadow
+                  padding: 20, // Padding inside the container
+                  color: "white", // Text color
                 }}
               >
-                <p className = {`${monsterrat.className}`}>Ask your supervisor for help accessing a link you need.</p>
-                <p className = {`${monsterrat.className}`}>
-                  Contact the HR department at{" "}
-                  <a href="mailto:support@hrdc.org" className="text-blue-500">
-                    support@hrdc.org
-                  </a>.
-                </p>
+                <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+                <div
+                  style={{
+                    background: "white", // Background color for the help text
+                    color: "black", // Text color
+                    borderRadius: 20, // Rounded corners
+                    padding: 20, // Padding inside the text container
+                    maxHeight: 400, // Maximum height for the text container
+                    overflowY: "auto", // Enable vertical scrolling if content overflows
+                  }}
+                >
+                  {/* Help text */}
+                  <p>Ask your supervisor for help accessing a link you need.</p>
+                  <p>Contact the HR department at <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.</p>
+                </div>
               </div>
             </div>
           </div>
->>>>>>> 7145757c053c29517d2f6b6d74294032aad215d2
-
         </div>
       </div>
-       {/* links are underlined on this page */}
-      {/* only this page gets these styles */}
-      <style jsx>{`
-        .link-style a {
-          color: #1a0dab;
-          text-decoration: underline;
-        }
-      `}</style>
-
     </>
   );
 }
