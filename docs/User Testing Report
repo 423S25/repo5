@@ -1,0 +1,20 @@
+Group 5 User Testing : Candidate Release 
+
+To conduct user testing for our candidate release, we designed a structured Google Forms survey to collect both qualitative and quantitative user feedback. Our primary goals were to identify usability issues, uncover common user errors, and assess overall user sentiment regarding the interface. 
+
+In the start of our test design we conducted an evaluation of the application to map out primary user flows and potential edge cases. This ensured the tests would provide coverage across the interface and maximized the effectiveness of our usability testing. We wrote our tests to ask the user to follow flows and report if they were able to complete the task and if they faced any issues doing so. An example of our tests would be to ask the user to “find where the time card login is on the staff page”. If they were able to find the time card without any misclicks or errors in their path their this action would be marked as being correct.
+
+	We tested our site on multiple users, 6 total. We took in information regarding their age, first language, technology usage, technical limitations and technical familiarity. Our users this round were predominantly aged 18 to 24, spoke English as a first language, regularly used technology, owned and used multiple devices, faced no technological limitations and felt moderately comfortable using technology.
+
+When asked to follow paths in the site every user was able to complete this task. Each path the users where asked complete was done so at 100% success rate. When asked if there were any tasks that they had issues on, no users reported having any issues. This may be due to the type of user assed which was younger and more technically literate than our target users. To get more comprehensive testing we are doing a second round of testing. In this second round we will focus on a few users who more accurately fit the target market of elderly and not technically fluent users. 
+
+In the user sentiment section issues were brought up. We did an analysis to highlight the key words mentioned. This can be seen in the word cloud where more commonly mentioned words are larger. From user testing we learned that we need to fix multiple aspects. 
+
+Aspects to Fix: 
+Fix input contrast: Make login text visible by using darker text on light backgrounds.
+Add “Show Password” toggle: Let users see their password to reduce login errors.
+Style links clearly: Use standard blue, underlined styling or hover effects for links.
+Add real-time validation: Show immediate feedback for incorrect email/password formats.
+Improve focus states: Highlight active input fields to guide user interaction.
+
+As a result of this testing we learned aspects we needed to fix and got a better understanding of the users we need to test in the next round. Now we will be working on fixing contrast issues, adding the ability to show password when typing, and other places of pain for users. 

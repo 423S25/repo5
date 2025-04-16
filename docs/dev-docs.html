@@ -47,8 +47,7 @@
 <body>
     <div class="container">
         <h1>HRDC Intranet Developer Documentation</h1>
-    <p style="color: #cc0000; font-size: 0.9em; font-weight: bold; margin-top: -10px;">
-      (Updated since Beta Release)</p>
+    <p style="color: #cc0000; font-size: 0.9em; font-weight: bold; margin-top: -10px;"></p>
 
 
         <h2>Source Code Access</h2>
@@ -64,25 +63,26 @@
             <li><strong>Future Development:</strong> Additional features and files will be integrated in upcoming iterations.</li>
         </ul>
 
-        <h2>Running the App Locally</h2>
+        <h2>Running the App Locally  <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
 <p>
   For full instructions on how to run the HRDC Intranet locally, including environment setup and Firebase configuration, see the 
   <a href="dev-setup-guide.html" target="_blank">Local Setup Guide</a>.
 </p>
 
 
-        <h2>Authentication <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+        <h2>Authentication</h2>
         <ul>
           <li><strong>Firebase Authentication:</strong> Implemented email/password and Google login using Firebase Auth.</li>
           <li><strong>User Roles:</strong> Authenticated users are assigned roles based on their login email. </li>
           <li><strong>Session Handling:</strong> Logged-in users persist via Firebase and are redirected on login/logout.</li>
         </ul>
 
-      <h2>Announcements Feature <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+      <h2>Announcements Feature </h2>
         <ul>
           <li><strong>Firestore Integration:</strong> Announcements are stored in Firebase Firestore.</li>
           <li><strong>Display:</strong> Announcements appear dynamically on the homepage for all users.</li>
-          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create announcements.</li>
+          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create  or delete announcements.</li>
+          <li><strong>Deletion:</strong> Admins can now delete announcements directly from the Manage Announcements page using a Delete button next to each post. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
           <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
             <li><strong>Google Calendar Integration:</strong> A shared HRDC calendar was embedded using an <code>&lt;iframe&gt;</code> element in <code>src/app/page.tsx</code>.</li>
 
@@ -90,18 +90,46 @@
 
 
 
-   <h2>Testing <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+   <h2>Testing </h2>
 
 <ul>
 
-      <li><strong>Unit Tests Implemented:</strong> Tests were created using <code>@testing-library/react</code> for the Help Page. These tests check rendering of FAQ content, search functionality, and accessibility of UI elements. Test files are located in the <code>__tests__</code> directory.</li>
+  <li><strong>User Testing Summary:</strong> 
+    We conducted structured user testing with five participants, none of whom had prior experience with our system. 
+    Users completed tasks like logging in, posting announcements, using search, and locating key resources. 
+    Their feedback led us to improve login input field visibility and underline and color important links.
+    A one-page overview is available in the 
+    <a href="user-testing/UserEvaluationSummary.pdf" target="_blank">User Evaluation Summary</a>. 
+    Full testing report can be found in the 
+    <a href="user-testing/HRDCUserTesting.pdf" target="_blank">HRDC User Testing Report</a>, 
+    along with a 
+    <a href="user-testing/user-test-cases2.pdf" target="_blank">Supplemental Test Case Log</a>. 
+    <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span>
+  </li>
+  
+  
+ 
+  
+  <li><strong>Unit Tests Implemented:</strong> 
+    We added tests using <code>@testing-library/react</code> for several parts of the site: the Help Page, Search Page, Navbar, and a utility function called <code>normalize</code>, which cleans up text by removing extra spaces and ignoring capitalization (in Search). 
+    These tests check if pages show the right things, if buttons and inputs work, and if content changes based on the user (admin vs. regular user). 
+    All test files are in the <code>__tests__</code> folder. <span style="color: #cc0000; font-size: 0.8em;">(Expanded in this release)</span>
+  </li>
+  
+  
+  <li><strong>System Tests:</strong> 
+    We also created system-level tests for the Home Page and Announcements. 
+    These tests pretend to load data from Firebase to make sure the right content shows up on the page. 
+    This helps us check how the app works as a whole. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span>
+  </li>
 
   <li><strong>Manual Testing: </strong> 
     Manual testing was performed for login/logout, posting announcements, announcement display, and role-based access (admin vs. general users).
   </li>
-  
+
   <li><strong>Selenium IDE Test:</strong> 
-    An end-to-end test was created using Selenium IDE to simulate admin login, posting an announcement, and logout. The test file is included in the root directory as <code>PostAnnouncementTest.side</code>. You can <a href="https://github.com/423S25/repo5/raw/main/PostAnnouncementTest.side" target="_blank">download the test .side file here</a>.
+    An end-to-end test was created using Selenium IDE to simulate admin login, posting an announcement, and logout. The test file is included in the root directory as <code>PostAnnouncementTest.side</code>. 
+    You can <a href="https://github.com/423S25/repo5/raw/main/PostAnnouncementTest.side" target="_blank">download the test .side file here</a>.
   </li>
 
   <li><strong>Human-Computer Interaction Tests:</strong> 
@@ -110,39 +138,39 @@
   </li>
 </ul>
 
-
-        <h3>Test Coverage <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h3>
+<h3>Test Coverage <span style="color: #cc0000; font-size: 0.8em;">(Expanded in this release)</span></h3>
 
 <p>
-  We used <code>Jest</code> with <code>@testing-library/react</code> to measure how much of our Help Page code is covered by automated tests.
-  Firebase was successfully mocked using <code>jest.mock()</code> and a <code>__mocks__/firebaseConfig.ts</code> file. 
+  We used <code>Jest</code> with <code>@testing-library/react</code> to measure how much of our code is covered by automated tests. 
+  Firebase authentication and Firestore modules were successfully mocked using <code>jest.mock()</code> and custom mock files inside <code>__mocks__/firebase</code>. 
+  We also mocked <code>next/navigation</code> to simulate routing behavior for both unit and integration tests.
 </p>
 
 <p>
-  While we focused testing on the Help Page (our most interactive and static-content-heavy page), other parts of the app rely heavily on dynamic Firebase behavior (e.g., login, announcements), which complicates automated testing.
+  All key components—including <code>HelpPage</code>, <code>SearchPage</code>, <code>Navbar</code>, and <code>Announcements</code>—are now covered by automated tests.
 </p>
 
-<p><strong>Test Coverage Output:</strong></p>
+<p><strong>Latest Test Coverage Output:</strong></p>
 
 <pre>
-File         | % Stmts | % Branch | % Funcs | % Lines
--------------|---------|----------|---------|---------
-components   |   37.93 |     0    |    10   |   37.03
-Navbar.tsx   |   37.93 |     0    |    10   |   37.03
-help         |   81.81 |    50    |    60   |   81.81
-page.tsx     |   81.81 |    50    |    60   |   81.81
-All files    |    50   |    20    |  26.66  |    50
+File                   | % Stmts | % Branch | % Funcs | % Lines
+-----------------------|---------|----------|---------|---------
+components             |   65.51 |    44.44 |    50   |   62.96
+Navbar.tsx             |   65.51 |    44.44 |    50   |   62.96
+help/page.tsx          |   90.90 |    50    |    80   |   90.90
+announcements/page.tsx |   44.82 |    26.66 |  26.66  |   47.16
+search/page.tsx        |   100   |    80    |   100   |   100
+utils/getAnnouncements.ts | 100 |    50    |   100   |   100
+All files              |   67.54 |    43.90 |  56.81  |   69.50
 </pre>
 
-<p>
-  <strong>Note:</strong> Testing on <code>Navbar.tsx</code> is limited due to its reliance on Next.js <code>useRouter()</code> and Firebase authentication. 
-</p>
+
 
 <p>
-  You can replicate the coverage report by running:
+  You can replicate the full coverage report by running:
 </p>
 
-<pre><code>npx jest --coverage</code></pre>
+<pre><code>npx jest --clearCache && npx jest --coverage</code></pre>
 
 
 
