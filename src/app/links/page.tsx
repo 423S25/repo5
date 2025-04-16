@@ -61,10 +61,20 @@ export default function LinksPage() {
           {/* Content container */}
           <div className="container mx-auto p-6">
             {/* Page title */}
+            <div
+              style={{
+                width: 980,
+                background: "#A1A750",
+                boxShadow: "0px 3px 4px 6px rgba(0, 0, 0, 0.2)",
+                padding: 20,
+                color: "white",
+              }}
+            >
             <h1 className={`${monsterratBold.className}`}>Important Links</h1>
             <p className={`${monsterrat.className}`}>
               Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.
             </p>
+            </div>
 
             {/* Search Section */}
             <div className="flex justify-center mt-10">
@@ -132,7 +142,7 @@ export default function LinksPage() {
                 >
                   {/* List of important links */}
                   <ul className="list-disc ml-6">
-                    <li className={`${monsterratBold.className}`}>
+                    <li className={`${monsterrat.className}`}>
                       <a 
                         target="_blank"
                         rel="noopener noreferrer"
@@ -142,7 +152,7 @@ export default function LinksPage() {
                         Timesheet Login
                       </a>
                     </li>
-                    <li>
+                    <li className={`${monsterrat.className}`}>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -152,7 +162,7 @@ export default function LinksPage() {
                         New Hire Information Request
                       </a>
                     </li>
-                    <li>
+                    <li className={`${monsterrat.className}`}>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
