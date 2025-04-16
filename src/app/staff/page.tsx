@@ -16,6 +16,21 @@ import { useRouter } from "next/navigation";
 // we use state to store user input (search box)
 import { useState, useEffect } from "react";
 
+
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 // this is the main staff page
 export default function StaffPage() {
   // state to store what user types into search
@@ -62,8 +77,8 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h1 className="text-3xl font-bold">HRDC Staff Resources</h1>
-              <p>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
+              <h1 className={`${monsterratBold.className}`}>HRDC Staff Resources</h1>
+              <p className= {`${monsterrat.className}`}>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
             </div>
           </div>
 
@@ -79,7 +94,7 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">What can we help you find today?</h2>
+              <h2 className={`${monsterratBold.className}`}>What can we help you find today?</h2>
               <div
                 style={{
                   background: "white",
@@ -131,7 +146,7 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">Staff Actions</h2>
+              <h2 className={`${monsterratBold.className}`}>Staff Actions</h2>
               <div
                 style={{
                   background: "white",
@@ -144,9 +159,9 @@ export default function StaffPage() {
               >
                 {/* just one action for now */}
                 <ul className="list-disc ml-6">
-                  <li>
+                  <li className={`${monsterrat.className}`}>
                     Submit Timecards:{" "}
-                    <a target="_blank" href="https://www.paychex.com/login" className="text-blue-600 underline">
+                    <a  target="_blank" href="https://www.paychex.com/login" className="text-blue-600 underline">
                       Paychex Login
                     </a>
                   </li>
@@ -167,7 +182,7 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">HR Resources</h2>
+              <h2 className={`${monsterratBold.className}`}>HR Resources</h2>
               <div
                 style={{
                   background: "white",
@@ -180,7 +195,7 @@ export default function StaffPage() {
               >
                 <ul className="list-disc ml-6">
                   {/* only handbook link for now */}
-                  <li>
+                  <li className={`${monsterrat.className}`}>
                     <a
                       href="/Employee_Handbook.pdf"
                       target="_blank"
@@ -209,7 +224,7 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h2 className="text-2xl font-bold mb-4">📞 Need Help?</h2>
+              <h2 className={`${monsterratBold.className}`}>📞 Need Help?</h2>
               <div
                 style={{
                   background: "white",
@@ -221,10 +236,10 @@ export default function StaffPage() {
                 }}
               >
                 {/* contact info */}
-                <p>If you need assistance, contact:</p>
+                <p className= {`${monsterrat.className}`}>If you need assistance, contact:</p>
                 <ul className="list-disc ml-6">
-                  <li>HR Department: hr@hrdc.org</li>
-                  <li>IT Support: support@hrdc.org</li>
+                  <li className= {`${monsterrat.className}`}>HR Department: hr@hrdc.org</li>
+                  <li className= {`${monsterrat.className}`}>IT Support: support@hrdc.org</li>
                 </ul>
               </div>
             </div>
