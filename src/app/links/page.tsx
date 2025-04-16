@@ -103,7 +103,8 @@ export default function LinksPage() {
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="border border-gray-300 rounded px-4 py-2 w-full text-black"
+                    className="border border-gray-300 rounded px-4 py-2 w-full {`${monsterratBold.className}`}"
+                    // w-full text-black
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)} // update search text when typed
                   />
