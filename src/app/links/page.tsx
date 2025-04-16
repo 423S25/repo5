@@ -48,6 +48,40 @@ export default function LinksPage() {
             <div className="flex justify-center mt-10">
               <div
                 style={{
+                  background: "white",
+                  color: "black",
+                  borderRadius: 20,
+                  padding: 20,
+                }}
+              >
+                {/* form handles the search input */}
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault(); // stops the page from refreshing
+                    if (searchText.trim() !== "") {
+                      router.push(`/search?query=${searchText}`); // send to search page with query
+                    }
+                  }}
+                  className="flex items-center"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="border border-gray-300 rounded px-4 py-2 w-full {`${monsterratBold.className}`}"
+                    // w-full text-black
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)} // update search text when typed
+                  />
+                  <button
+                    type="submit"
+                    className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
                   width: 800, // Width of the search box
                   background: "#147278", // Background color for the search box
                   borderRadius: 20, // Rounded corners
