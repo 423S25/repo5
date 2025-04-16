@@ -59,7 +59,7 @@ export default function LinksPage() {
           }}
         >
           {/* Content container */}
-          <div className="container mx-auto p-6">
+          <div className="flex justify-center mt-10">
             {/* Page title */}
             <div
               style={{
