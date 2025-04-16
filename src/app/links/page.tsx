@@ -3,14 +3,21 @@ export const dynamic = "force-dynamic"; // Forces dynamic rendering for this pag
 
 // Import necessary components and hooks
 import { NavBar } from "../components/Navbar"; // Navigation bar component
-import { getAnnouncements } from "@/utils/getAnnouncements"; // Utility function (not used in this code)
 import { useRouter } from "next/navigation"; // Router hook for navigation
-import { useState, useEffect } from "react"; // React hooks for state and lifecycle management
+import { useState } from "react"; // React hook for state management
 
 // Define the LinksPage component
 export default function LinksPage() {
   const [searchText, setSearchText] = useState(""); // State to store the search input
   const router = useRouter(); // Router instance for navigation
+
+  // Handle search form submission
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form submission
+    if (searchText.trim() !== "") {
+      router.push(`/search?query=${searchText}`); // Navigate to the search results page
+    }
+  };
 
   return (
     <>
@@ -18,7 +25,7 @@ export default function LinksPage() {
       <NavBar />
 
       {/* Main container for the page */}
-      <div 
+      <div
         style={{
           width: "100%",
           minHeight: "100vh",
@@ -29,59 +36,26 @@ export default function LinksPage() {
         }}
       >
         {/* Inner container for the content */}
-        <div 
+        <div
           style={{
             width: 980, // Fixed width for the content box
             background: "white", // White background for the content box
-            top: 0,
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25) inset", // Add an inset shadow
             paddingBottom: "100px", // Add space at the bottom
           }}
         >
-          {/* Content container with padding */}
-          <div className="container mx-auto p-6"> 
+          {/* Content container */}
+          <div className="container mx-auto p-6">
             {/* Page title */}
             <h1 className="text-3xl font-bold mb-4 text-center">Important Links</h1>
-            <p>Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.</p>
-       
-            {/* Search Prompt Section */}
+            <p className="text-center">
+              Welcome to the Important Links Page. Here you&apos;ll find links to websites you need to access often.
+            </p>
+
+            {/* Search Section */}
             <div className="flex justify-center mt-10">
               <div
                 style={{
-                  background: "white",
-                  color: "black",
-                  borderRadius: 20,
-                  padding: 20,
-                }}
-              >
-                {/* form handles the search input */}
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault(); // stops the page from refreshing
-                    if (searchText.trim() !== "") {
-                      router.push(`/search?query=${searchText}`); // send to search page with query
-                    }
-                  }}
-                  className="flex items-center"
-                >
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="border border-gray-300 rounded px-4 py-2 w-full {`${monsterratBold.className}`}"
-                    // w-full text-black
-                    value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)} // update search text when typed
-                  />
-                  <button
-                    type="submit"
-                    className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
-                  >
-                    Search
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
                   width: 800, // Width of the search box
                   background: "#147278", // Background color for the search box
                   borderRadius: 20, // Rounded corners
@@ -100,16 +74,7 @@ export default function LinksPage() {
                   }}
                 >
                   {/* Search form */}
-                  <form
-                    onSubmit={(e) => {
-                      e.preventDefault(); // Prevent default form submission
-                      if (searchText.trim() !== "") {
-                        router.push(`/search?query=${searchText}`); // Navigate to the search results page
-                      }
-                    }}
-                    className="flex items-center"
-                  >
-                    {/* Search input */}
+                  <form onSubmit={handleSearch} className="flex items-center">
                     <input
                       type="text"
                       placeholder="Search..."
@@ -117,7 +82,6 @@ export default function LinksPage() {
                       value={searchText} // Bind input value to state
                       onChange={(e) => setSearchText(e.target.value)} // Update state on input change
                     />
-                    {/* Search button */}
                     <button
                       type="submit"
                       className="ml-2 bg-[#147278] text-white px-4 py-2 rounded"
@@ -155,13 +119,34 @@ export default function LinksPage() {
                   {/* List of important links */}
                   <ul className="list-disc ml-6">
                     <li className="mt-2">
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.paychex.com/login" className="text-blue-500 underline">Timesheet Login</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.paychex.com/login"
+                        className="text-blue-500 underline"
+                      >
+                        Timesheet Login
+                      </a>
                     </li>
                     <li>
-                      <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfN0Ju3jDKo3sLZPYz9IE93lLBKIG_SGxC7qsbcyCnT9_fR2w/viewform?usp=sf_link" className="text-blue-500 underline">New Hire Information Request</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfN0Ju3jDKo3sLZPYz9IE93lLBKIG_SGxC7qsbcyCnT9_fR2w/viewform?usp=sf_link"
+                        className="text-blue-500 underline"
+                      >
+                        New Hire Information Request
+                      </a>
                     </li>
                     <li>
-                      <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link" className="text-blue-500 underline">Central Files Cover Sheet Submission Form</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfeVazdx3wStnG6HA6lqEG3qqR8Y4gf5YA6e5hI--JWG2yrNg/viewform?usp=sf_link"
+                        className="text-blue-500 underline"
+                      >
+                        Central Files Cover Sheet Submission Form
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -193,7 +178,13 @@ export default function LinksPage() {
                 >
                   {/* Help text */}
                   <p>Ask your supervisor for help accessing a link you need.</p>
-                  <p>Contact the HR department at <a href="mailto:support@hrdc.org" className="text-blue-500">support@hrdc.org</a>.</p>
+                  <p>
+                    Contact the HR department at{" "}
+                    <a href="mailto:support@hrdc.org" className="text-blue-500">
+                      support@hrdc.org
+                    </a>
+                    .
+                  </p>
                 </div>
               </div>
             </div>
