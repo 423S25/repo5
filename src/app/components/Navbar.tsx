@@ -26,7 +26,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        montserrats: ['Montserrat', 'sans-serif'],
       },
     },
   },
@@ -68,7 +68,7 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrat">Home</Link>
+          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrats">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
