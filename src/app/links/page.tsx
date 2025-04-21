@@ -59,7 +59,7 @@ export default function LinksPage() {
           }}
         >
           {/* Content container */}
-          <div className="flex justify-center mt-10">
+          <div className="text-center mt-10">
             {/* Page title */}
             <div
               style={{
