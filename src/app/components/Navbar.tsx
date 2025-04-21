@@ -21,6 +21,18 @@ const monsterratBold = Montserrat({
 });
 
 
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+    },
+  },
+};
+
+
 // this is the main navigation bar that shows up on every page
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false); // controls mobile dropdown
@@ -50,20 +62,20 @@ export const NavBar = () => {
         {/* HRDC logo and title */}
         <Link href="/" className="flex items-center">
           <img src="/logo.png" alt="HRDC Logo" className="h-10 w-auto mr-3" />
-          <span className="text-2xl font-bold">HRDC Intranet</span>
+          <span className={`${monsterratBold.className}`}>HRDC Intranet</span>
         </Link>
 
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="{`${monsterratBold.className}`} mx-2 hover:text-gray-300">Home</Link>
+          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrat">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
 
           {/* only show admin tools to admin user */}
           {user?.email === "admin@hrdc.com" && (
-            <Link href="/announcements" className="mx-2 underline text-yellow-300">
+            <Link href="/announcements" className="mx-2 underline font-montserrat text-yellow-300">
               Manage Announcements
             </Link>
           )}
