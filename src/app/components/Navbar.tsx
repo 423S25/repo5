@@ -6,6 +6,21 @@ import { useRouter } from "next/navigation"; // lets us navigate in code
 import { auth } from "@/firebaseConfig"; // Firebase auth setup
 import { onAuthStateChanged, signOut } from "firebase/auth"; // for login/logout handling
 
+import { Montserrat } from 'next/font/google';
+
+const monsterrat = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const monsterratBold = Montserrat({
+  weight: '900',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+
 // this is the main navigation bar that shows up on every page
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false); // controls mobile dropdown
@@ -41,7 +56,7 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="mx-2 hover:text-gray-300">Home</Link>
+          <Link href="/" className="mx-2 font-montserrat hover:text-gray-300">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
