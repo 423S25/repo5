@@ -56,7 +56,7 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="mx-2 font-montserrat hover:text-gray-300">Home</Link>
+          <Link href="/" className="{`${monsterratBold.className}`} mx-2 hover:text-gray-300">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
