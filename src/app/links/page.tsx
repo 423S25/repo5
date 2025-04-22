@@ -108,7 +108,7 @@ export default function LinksPage() {
                     />
                     <button
                       type="submit"
-                      className="ml-2 bg-[#147278] text-white {`${monsterratBold.className}`} px-4 py-2 rounded"
+                      className={`ml-2 bg-[#147278] text-white ${monsterratBold.className} px-4 py-2 rounded`}
                     >
                       Search
                     </button>
@@ -189,7 +189,7 @@ export default function LinksPage() {
                   color: "white", // Text color
                 }}
               >
-                <h2 className="text-2xl font-bold mb-4">{`${monsterratBold.className}`}>Need More Help?</h2>
+                <h2 className={`text-2xl font-bold mb-4 ${monsterratBold.className}`}>Need More Help?</h2>
                 <div
                   style={{
                     background: "white", // Background color for the help text
