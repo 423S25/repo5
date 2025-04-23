@@ -118,7 +118,7 @@ export default function LinksPage() {
             </div>
 
             {/* Important Links Section */}
-            <div className="flex mt-10">
+            <div className="flex justify-center mt-10">
               <div
                 style={{
                   width: 800, // Width of the links container
@@ -141,7 +141,7 @@ export default function LinksPage() {
                   }}
                 >
                   {/* List of important links */}
-                  <ul className="list-disc ml-6">
+                  <ul className="list-disc ml-6 text-left">
                     <li className={`${monsterrat.className}`}>
                       <a 
                         target="_blank"
