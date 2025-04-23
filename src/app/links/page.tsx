@@ -189,7 +189,7 @@ export default function LinksPage() {
                   color: "white", // Text color
                 }}
               >
-                <h2 className={`text-2xl font-bold mb-4 ${monsterratBold.className}`}>Need More Help?</h2>
+                <h2 className={`${monsterratBold.className}`}>Need More Help?</h2>
                 <div
                   style={{
                     background: "white", // Background color for the help text
@@ -201,7 +201,6 @@ export default function LinksPage() {
                   }}
                 >
                   {/* Help text */}
-                  <h2 className={`${monsterratBold.className}`}>Need More Help?</h2>
                   <p className={`${monsterrat.className}`}>Ask your supervisor for help accessing a link you need.</p>
                   <p className = {`${monsterrat.className}`}>
                     Contact the HR department at{" "}
