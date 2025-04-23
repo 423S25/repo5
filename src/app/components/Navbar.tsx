@@ -63,10 +63,16 @@ export const NavBar = () => {
 
           {/* only show admin tools to admin user */}
           {user?.email === "admin@hrdc.com" && (
-            <Link href="/announcements" className="mx-2 underline text-yellow-300">
-              Manage Announcements
-            </Link>
-          )}
+  <>
+    <Link href="/announcements" className="mx-2 underline text-yellow-300">
+      Manage Announcements
+    </Link>
+    <Link href="/admin-links" className="mx-2 underline text-yellow-300">
+      Manage Links
+    </Link>
+  </>
+)}
+
 
           {/* search form (desktop) */}
           <form
@@ -134,10 +140,16 @@ export const NavBar = () => {
           <Link href="/links" className={`${monsterratBold.className} block py-2 hover:text-gray-300`}>Links</Link>
           {/* admin-only menu item */}
           {user?.email === "admin@hrdc.com" && (
-            <Link href="/announcements" className="block py-2 text-yellow-300">
-              Manage Announcements
-            </Link>
-          )}
+  <>
+    <Link href="/announcements" className="block py-2 text-yellow-300">
+      Manage Announcements
+    </Link>
+    <Link href="/admin-links" className="block py-2 text-yellow-300">
+      Manage Links
+    </Link>
+  </>
+)}
+
 
           {/* search bar (mobile version) */}
           <form
