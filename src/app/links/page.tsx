@@ -118,7 +118,7 @@ export default function LinksPage() {
             </div>
 
             {/* Important Links Section */}
-            <div className="flex justify-center mt-10">
+            <div className="flex mt-10">
               <div
                 style={{
                   width: 800, // Width of the links container
