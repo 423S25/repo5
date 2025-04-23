@@ -201,7 +201,7 @@ export default function LinksPage() {
                   }}
                 >
                   {/* Help text */}
-                  <p className={`${monsterrat.className}`}>Ask your supervisor for help accessing a link you need.</p>
+                  <p className={`${monsterrat.className}`}>Ask your supervisor for help accessing a link you need (TESTING).</p>
                   <p className = {`${monsterrat.className}`}>
                     Contact the HR department at{" "}
                     <a href="mailto:support@hrdc.org" className="text-blue-500">
