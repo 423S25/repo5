@@ -21,18 +21,6 @@ const monsterratBold = Montserrat({
 });
 
 
-
-/* module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        montserrats: ['Montserrat', 'sans-serif'],
-      },
-    },
-  },
-};
- */
-
 // this is the main navigation bar that shows up on every page
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false); // controls mobile dropdown
@@ -68,7 +56,7 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrat">Home</Link>
+          <Link href="/" className= "mx-2 hover:text-gray-300 font-montserrat">Home</Link>
           <Link href="/staff" className="mx-2 hover:text-gray-300 font-montserrat">Staff</Link>
           <Link href="/help" className="mx-2 hover:text-gray-300 font-montserrat">Help</Link>
           <Link href="/links" className="mx-2 hover:text-gray-300 font-montserrat">Links</Link>
