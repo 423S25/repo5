@@ -24,7 +24,7 @@ const monsterratBold = Montserrat({
 // Define the LinksPage component
 export default function LinksPage() {
   const [searchText, setSearchText] = useState(""); // State to store the search input
-  const [links, setLinks] = useState([]); // State to store links from Firebase
+  const [links, setLinks] = useState<{ id: string; title: string; url: string }[]>([]); // State to store links from Firebase
   const router = useRouter(); // Router instance for navigation
 
   // Fetch links on load
