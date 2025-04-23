@@ -140,11 +140,10 @@ export const NavBar = () => {
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-gray-800 py-4">
           {/* same links as desktop version */}
-          <Link href="/" className="block py-2 hover:text-gray-300">Home</Link>
-          <Link href="/staff" className="block py-2 hover:text-gray-300">Staff</Link>
-          <Link href="/help" className="block py-2 hover:text-gray-300">Help</Link>
-          <Link href="/links" className="block py-2 hover:text-gray-300">Links</Link>
-
+          <Link href="/" className={`${monsterratBold.className} block py-2 hover:text-gray-300`}>Home</Link>
+          <Link href="/staff" className={`${monsterratBold.className} block py-2 hover:text-gray-300`}>Staff</Link>
+          <Link href="/help" className={`${monsterratBold.className} block py-2 hover:text-gray-300`}>Help</Link>
+          <Link href="/links" className={`${monsterratBold.className} block py-2 hover:text-gray-300`}>Links</Link>
           {/* admin-only menu item */}
           {user?.email === "admin@hrdc.com" && (
             <Link href="/announcements" className="block py-2 text-yellow-300">
@@ -160,7 +159,8 @@ export const NavBar = () => {
                 router.push(`/search?query=${searchText}`);
               }
             }}
-            className="mt-4 flex items-center bg-white px-2 py-1 rounded"
+            className={`mt-4 flex items-center bg-white px-2 py-1 rounded ${monsterrat.className}`}
+
           >
             <input
               type="text"
