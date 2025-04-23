@@ -56,14 +56,14 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className= "mx-2 hover:text-gray-300 font-montserrat">Home</Link>
-          <Link href="/staff" className="mx-2 hover:text-gray-300 font-montserrat">Staff</Link>
-          <Link href="/help" className="mx-2 hover:text-gray-300 font-montserrat">Help</Link>
-          <Link href="/links" className="mx-2 hover:text-gray-300 font-montserrat">Links</Link>
+          <Link href="/" className= "mx-2 hover:text-gray-300">Home</Link>
+          <Link href="/staff" className="mx-2 hover:text-gray-300">Staff</Link>
+          <Link href="/help" className="mx-2 hover:text-gray-300">Help</Link>
+          <Link href="/links" className="mx-2 hover:text-gray-300">Links</Link>
 
           {/* only show admin tools to admin user */}
           {user?.email === "admin@hrdc.com" && (
-            <Link href="/announcements" className="mx-2 underline font-montserrat text-yellow-300">
+            <Link href="/announcements" className="mx-2 underline text-yellow-300">
               Manage Announcements
             </Link>
           )}
