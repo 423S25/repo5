@@ -208,12 +208,18 @@ export default function HomePageWrapper() {
                   <p className={`${monsterrat.className}`}>No new announcements.</p>
                 ) : (
                   <ul>
-                    {/* show list of announcements from firebase */}
+                    {/* show list of announcements from firebase and date  posted */}
                     {announcements.map((a: any) => (
                       <li key={a.id} className={`${monsterrat.className}`}>
                         <h4 className={`${monsterratBold.className}`}>{a.title}</h4>
                         <p>{a.content}</p>
-                        <p className={`${monsterrat.className}`}>Posted by {a.author}</p>
+                        <p className={`${monsterrat.className}`}>
+                             Posted by {a.author} on{" "}
+                              {a.timestamp?.seconds
+                              ? new Date(a.timestamp.seconds * 1000).toLocaleString()
+                                 : "unknown time"}
+                            </p>
+
                       </li>
                     ))}
                   </ul>
