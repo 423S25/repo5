@@ -22,7 +22,7 @@ const monsterratBold = Montserrat({
 
 
 
-module.exports = {
+/* module.exports = {
   theme: {
     extend: {
       fontFamily: {
@@ -31,7 +31,7 @@ module.exports = {
     },
   },
 };
-
+ */
 
 // this is the main navigation bar that shows up on every page
 export const NavBar = () => {
@@ -68,14 +68,14 @@ export const NavBar = () => {
         {/* Desktop menu (visible on medium+ screens) */}
         <div className="hidden md:flex items-center">
           {/* regular links */}
-          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrats">Home</Link>
-          <Link href="/staff" className="mx-2 hover:text-gray-300 font-montserrats">Staff</Link>
-          <Link href="/help" className="mx-2 hover:text-gray-300 font-montserrats">Help</Link>
-          <Link href="/links" className="mx-2 hover:text-gray-300 font-montserrats">Links</Link>
+          <Link href="/" className="mx-2 hover:text-gray-300 font-montserrat">Home</Link>
+          <Link href="/staff" className="mx-2 hover:text-gray-300 font-montserrat">Staff</Link>
+          <Link href="/help" className="mx-2 hover:text-gray-300 font-montserrat">Help</Link>
+          <Link href="/links" className="mx-2 hover:text-gray-300 font-montserrat">Links</Link>
 
           {/* only show admin tools to admin user */}
           {user?.email === "admin@hrdc.com" && (
-            <Link href="/announcements" className="mx-2 underline font-montserrats text-yellow-300">
+            <Link href="/announcements" className="mx-2 underline font-montserrat text-yellow-300">
               Manage Announcements
             </Link>
           )}
