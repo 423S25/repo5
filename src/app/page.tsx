@@ -156,7 +156,7 @@ export default function HomePageWrapper() {
                 { label: "Important Links", href: "/links" },
               ].map((link, index) => (
                 <div
-                  key={index}
+                  key={index}  className={`${monsterrat.className}`}
                   style={{
                     width: 700, 
                     height: 100, 
