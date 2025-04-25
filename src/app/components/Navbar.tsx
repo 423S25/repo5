@@ -91,19 +91,19 @@ export const NavBar = () => {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button type="submit" className="ml-2 text-gray-700">🔍</button>
+            <button type="submit" className="ml-2 text-gray-700" role="search">🔍</button>
           </form>
 
           {/* shows Login if user not logged in, Logout if they are */}
           {user ? (
-            <button aria-label= "Logout" 
+            <button aria-label= "Logout" role = "logout"
               onClick={handleLogout}
               className="ml-4 bg-red-500 px-4 py-2 rounded"
             >
               Logout
             </button>
           ) : (
-            <Link href="/login" className="ml-4 bg-blue-500 px-4 py-2 rounded">
+            <Link href="/login" className="ml-4 text-black bg-lime-200 px-4 py-2 rounded">
               Login
             </Link>
           )}
@@ -112,7 +112,7 @@ export const NavBar = () => {
 
       {/* Button to open/close mobile menu */}
       <div className="md:hidden flex items-center">
-        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none" role="hamburger menu">
           <svg
             className="w-6 h-6 text-white"
             xmlns="http://www.w3.org/2000/svg"
@@ -169,19 +169,19 @@ export const NavBar = () => {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button type="submit" className="ml-2 text-gray-700">🔍</button>
+            <button type="submit" className="ml-2 text-gray-700" role="search">🔍</button>
           </form>
 
           {/* login/logout button (mobile) */}
           {user ? (
-            <button
+            <button role="login/logout"
               onClick={handleLogout}
               className="mt-4 bg-red-500 px-4 py-2 rounded"
             >
               Logout
             </button>
           ) : (
-            <Link href="/login" className="mt-4 bg-blue-500 px-4 py-2 rounded">
+            <Link href="/login" className="ml-4 text-black bg-lime-200 px-4 py-2 rounded">
               Login
             </Link>
           )}

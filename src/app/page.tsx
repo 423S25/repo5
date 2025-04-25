@@ -191,7 +191,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className={`${monsterratBold.className}`}>WHAT'S NEW</h2>
+              <h2 className={`${monsterratBold.className}`} >WHAT'S NEW</h2>
               <div
                 style={{
                   background: "white",
