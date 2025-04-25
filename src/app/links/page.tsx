@@ -77,8 +77,8 @@ export default function LinksPage() {
                 color: "white",
               }}
             >
-              <h1 className={`${monsterratBold.className}`}>Important Links</h1>
-              <p className={`${monsterrat.className}`}>
+              <h1 className={`${monsterratBold.className} text-gray-900`}>Important Links</h1>
+              <p className={`${monsterrat.className} text-gray-900`}>
                 Welcome to the Important Links Page. Here you'll find links to websites you need to access often.
               </p>
             </div>

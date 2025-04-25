@@ -100,8 +100,8 @@ export default function HelpPage() {
                 color: "white",
               }}
             >
-              <h1 className={`${monsterratBold.className}`}>Help & Support</h1>
-              <p className={`${monsterrat.className}`}>
+              <h1 className={`${monsterratBold.className} text-gray-900`}>Help & Support</h1>
+              <p className={`${monsterrat.className} text-gray-900`}>
                 Welcome to the HRDC Intranet Help Center. This site is designed to make it easy for employees and volunteers to find important forms, announcements, and training materials.
               </p>
             </div>

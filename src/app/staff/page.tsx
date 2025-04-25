@@ -77,8 +77,8 @@ export default function StaffPage() {
                 color: "white",
               }}
             >
-              <h1 className={`${monsterratBold.className}`}>HRDC Staff Resources</h1>
-              <p className= {`${monsterrat.className}`}>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
+              <h1 className={`${monsterratBold.className} text-gray-900`}>HRDC Staff Resources</h1>
+              <p className= {`${monsterrat.className} text-gray-900`}>Welcome to the HRDC Staff Portal. Use this page to access staff-related tools and resources.</p>
             </div>
           </div>
 

@@ -78,7 +78,7 @@ export default function HomePageWrapper() {
               }}
             >
               <h2 className={`${monsterratBold.className} text-gray-900 `}>HRDC Intranet</h2>
-              <p className={`${monsterrat.className}`}>
+              <p className={`${monsterrat.className} text-gray-900`}>
                 Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
               </p>
             </div>
