@@ -36,7 +36,7 @@ export default async function HomePage() {
           <div>
             <iframe
             title= "HRDC Calendar"
-            src="https://calendar.google.com/calendar/embed?height=800&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&src=Y183NDg5NDk4OTQ2ZWVmMjExYTE1ZjdjNWI4ZWU0MzVkNDBmZWZiMmI0MDA4ZGM1OThjMTUxODZkYjYwNjkyMjk1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%234285F4" 
+            src="https://calendar.google.com/calendar/embed?height=750&wkst=1&ctz=America%2FDenver&showPrint=0&src=MTk5MHJ5YW5wQGdtYWlsLmNvbQ&src=Y183NDg5NDk4OTQ2ZWVmMjExYTE1ZjdjNWI4ZWU0MzVkNDBmZWZiMmI0MDA4ZGM1OThjMTUxODZkYjYwNjkyMjk1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%234285F4" 
             style="border:solid 1px #777" 
             width="750" 
             height="750" 
