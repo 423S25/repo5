@@ -42,12 +42,11 @@ export default async function HomePage() {
             height="750" 
             frameborder="0" 
             scrolling="no">
-
              </iframe>
-             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 }
 
