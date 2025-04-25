@@ -91,12 +91,12 @@ export const NavBar = () => {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button type="submit" className="ml-2 text-gray-700" role="search">🔍</button>
+            <button type="submit" className="ml-2 text-gray-700" aria-label="search">🔍</button>
           </form>
 
           {/* shows Login if user not logged in, Logout if they are */}
           {user ? (
-            <button aria-label= "Logout" role = "logout"
+            <button aria-label= "Logout"
               onClick={handleLogout}
               className="ml-4 bg-red-500 px-4 py-2 rounded"
             >
@@ -112,7 +112,7 @@ export const NavBar = () => {
 
       {/* Button to open/close mobile menu */}
       <div className="md:hidden flex items-center">
-        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none" role="hamburger menu">
+        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none" aria-label="toggle menu">
           <svg
             className="w-6 h-6 text-white"
             xmlns="http://www.w3.org/2000/svg"
@@ -169,12 +169,12 @@ export const NavBar = () => {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button type="submit" className="ml-2 text-gray-700" role="search">🔍</button>
+            <button type="submit" className="ml-2 text-gray-700" aria-label="search">🔍</button>
           </form>
 
           {/* login/logout button (mobile) */}
           {user ? (
-            <button role="login/logout"
+            <button aria-label="login/logout"
               onClick={handleLogout}
               className="mt-4 bg-red-500 px-4 py-2 rounded"
             >
