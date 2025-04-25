@@ -77,7 +77,7 @@ export default function HomePageWrapper() {
                 color: "white",
               }}
             >
-              <h2 className={`${monsterratBold.className}`}>HRDC Intranet</h2>
+              <h2 className={`${monsterratBold.className} text-gray-900 `}>HRDC Intranet</h2>
               <p className={`${monsterrat.className}`}>
                 Welcome to the HRDC Intranet. You can use the navigation above to find important links, resources, and help.
               </p>
@@ -202,7 +202,7 @@ export default function HomePageWrapper() {
                   overflowY: "auto",
                 }}
               >
-                <h3 className={`${monsterratBold.className}`}>Announcements</h3>
+                <h3 className={`${monsterratBold.className}`} >Announcements</h3>
                 {/* if no announcements show fallback message */}
                 {announcements.length === 0 ? (
                   <p className={`${monsterrat.className}`}>No new announcements.</p>
