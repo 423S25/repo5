@@ -44,7 +44,7 @@ export default async function HomePage() {
             scrolling="no">
 
              </iframe>
-             </iframe>
+             </div>
           </div>
         </div>
       </div>
