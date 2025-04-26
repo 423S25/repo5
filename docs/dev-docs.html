@@ -84,8 +84,7 @@
           <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create, edit, or delete announcements.</li>
           <li><strong>Editing:</strong> Admins can now edit announcements directly from the Manage Announcements page using the Edit button next to each post. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
           <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
-            <li><strong>Google Calendar Integration:</strong> A shared HRDC calendar was embedded using an <code>&lt;iframe&gt;</code> element in <code>src/app/page.tsx</code>.</li>
-
+           
         </ul>
 
 <h2>Links Page Feature <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span> </h2>
@@ -93,9 +92,12 @@
   <li><strong>Firestore Integration:</strong> Links are stored in Firebase Firestore.</li>
   <li><strong>Display:</strong> Links are displayed on the Links page and accessible to all users.</li>
   <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can add, edit, or delete links.</li>
-  <li><strong>Link Management:</strong> Admins can manage links directly from the Manage Links page, including adding new links, editing existing ones, and deleting unwanted links. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
+  <li><strong>Link Management:</strong> Admins can manage links directly from the Manage Links page, including adding new links, editing existing ones, and deleting unwanted links. </li>
   <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
 </ul>
+
+         <h2> Google Calendar <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span> </h2>
+        <li><strong>Google Calendar Integration:</strong> A shared HRDC calendar was embedded using an <code>&lt;iframe&gt;</code> element in <code>src/app/page.tsx</code>.</li>
 
 
    <h2>Testing </h2>
@@ -206,11 +208,8 @@ All files              |   67.54 |    43.90 |  56.81  |   69.50
         <p>View additional UML diagrams here: <a href="https://lucid.app/lucidchart/836dd166-6b37-4ea5-9dd0-20db403e8c89/edit?viewport_loc=-405%2C-607%2C2334%2C1076%2C0_0&invitationId=inv_b3e05374-a2e8-4f75-998f-e1e801f5092d" target="_blank">Lucidchart UML Diagrams</a>.</p>
         <p>More Additional UML diagrams here: <a href="https://lucid.app/lucidchart/91a26bfb-cc7b-449f-9ba2-4eadc2cc334e/edit?invitationId=inv_b408ba21-a78b-4ccf-b15b-d77c43610e5e&page=_WH0BOjE-laI#" target="_blank">Lucidchart UML Diagrams</a>.</p>
 
-        <div class="footer">
-            <p>Last Updated: <span id="lastUpdated"></span></p>
-        </div>
-    </div>
-    <h2>HRDC Transfer</h2>
+
+         <h2>HRDC Transfer</h2>
     <p>Option 1</p>
     <p>The simplest option is to keep the domain name the site is currently under. Here they can put a button on their main page that links to this site. Here the benefit is how simplistic this process is. A simpler process leads to less change of error and issues. The downfall of doing it this way is that the url and domain name will not be inline with the HRDC. 
 
@@ -235,6 +234,13 @@ All files              |   67.54 |    43.90 |  56.81  |   69.50
     <li>Ensure correct file permissions & settings</li>
     <li>Test the site and domain</li>
 
+        
+        <div class="footer">
+            <p>Last Updated: <span id="lastUpdated"></span></p>
+        </div>
+    </div>
+    
+  
 </p>
     <script>
         document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString();
