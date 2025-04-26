@@ -63,7 +63,7 @@
             <li><strong>Future Development:</strong> Additional features and files will be integrated in upcoming iterations.</li>
         </ul>
 
-        <h2>Running the App Locally  <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></h2>
+        <h2>Running the App Locally  </h2>
 <p>
   For full instructions on how to run the HRDC Intranet locally, including environment setup and Firebase configuration, see the 
   <a href="dev-setup-guide.html" target="_blank">Local Setup Guide</a>.
@@ -81,13 +81,21 @@
         <ul>
           <li><strong>Firestore Integration:</strong> Announcements are stored in Firebase Firestore.</li>
           <li><strong>Display:</strong> Announcements appear dynamically on the homepage for all users.</li>
-          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create  or delete announcements.</li>
-          <li><strong>Deletion:</strong> Admins can now delete announcements directly from the Manage Announcements page using a Delete button next to each post. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
+          <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can create, edit, or delete announcements.</li>
+          <li><strong>Editing:</strong> Admins can now edit announcements directly from the Manage Announcements page using the Edit button next to each post. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
           <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
             <li><strong>Google Calendar Integration:</strong> A shared HRDC calendar was embedded using an <code>&lt;iframe&gt;</code> element in <code>src/app/page.tsx</code>.</li>
 
         </ul>
 
+<h2>Links Page Feature <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span> </h2>
+<ul>
+  <li><strong>Firestore Integration:</strong> Links are stored in Firebase Firestore.</li>
+  <li><strong>Display:</strong> Links are displayed on the Links page and accessible to all users.</li>
+  <li><strong>Admin Access:</strong> Only <code>admin@hrdc.com</code> (password: admin123) can add, edit, or delete links.</li>
+  <li><strong>Link Management:</strong> Admins can manage links directly from the Manage Links page, including adding new links, editing existing ones, and deleting unwanted links. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span></li>
+  <li><strong>Security Rules:</strong> Firestore is secured to allow read for all, but write only for the admin.</li>
+</ul>
 
 
    <h2>Testing </h2>
@@ -104,7 +112,6 @@
     <a href="user-testing/HRDCUserTesting.pdf" target="_blank">HRDC User Testing Report</a>, 
     along with a 
     <a href="user-testing/user-test-cases2.pdf" target="_blank">Supplemental Test Case Log</a>. 
-    <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span>
   </li>
   
   
@@ -113,14 +120,14 @@
   <li><strong>Unit Tests Implemented:</strong> 
     We added tests using <code>@testing-library/react</code> for several parts of the site: the Help Page, Search Page, Navbar, and a utility function called <code>normalize</code>, which cleans up text by removing extra spaces and ignoring capitalization (in Search). 
     These tests check if pages show the right things, if buttons and inputs work, and if content changes based on the user (admin vs. regular user). 
-    All test files are in the <code>__tests__</code> folder. <span style="color: #cc0000; font-size: 0.8em;">(Expanded in this release)</span>
+    All test files are in the <code>__tests__</code> folder. 
   </li>
   
   
   <li><strong>System Tests:</strong> 
     We also created system-level tests for the Home Page and Announcements. 
     These tests pretend to load data from Firebase to make sure the right content shows up on the page. 
-    This helps us check how the app works as a whole. <span style="color: #cc0000; font-size: 0.8em;">(New in this release)</span>
+    This helps us check how the app works as a whole.
   </li>
 
   <li><strong>Manual Testing: </strong> 
@@ -138,7 +145,7 @@
   </li>
 </ul>
 
-<h3>Test Coverage <span style="color: #cc0000; font-size: 0.8em;">(Expanded in this release)</span></h3>
+<h3>Test Coverage </h3>
 
 <p>
   We used <code>Jest</code> with <code>@testing-library/react</code> to measure how much of our code is covered by automated tests. 
@@ -195,7 +202,7 @@ All files              |   67.54 |    43.90 |  56.81  |   69.50
         <img src="https://raw.githubusercontent.com/423S25/repo5/main/ClassDiagram.jpeg" alt="Class Diagram for HRDC Intranet" width="600">
 
 
-        <h2>UML Diagrams <span style="color: #cc0000; font-size: 0.8em;">(Expanded since Beta Release)</span></h2> 
+        <h2>UML Diagrams </h2> 
         <p>View additional UML diagrams here: <a href="https://lucid.app/lucidchart/836dd166-6b37-4ea5-9dd0-20db403e8c89/edit?viewport_loc=-405%2C-607%2C2334%2C1076%2C0_0&invitationId=inv_b3e05374-a2e8-4f75-998f-e1e801f5092d" target="_blank">Lucidchart UML Diagrams</a>.</p>
         <p>More Additional UML diagrams here: <a href="https://lucid.app/lucidchart/91a26bfb-cc7b-449f-9ba2-4eadc2cc334e/edit?invitationId=inv_b408ba21-a78b-4ccf-b15b-d77c43610e5e&page=_WH0BOjE-laI#" target="_blank">Lucidchart UML Diagrams</a>.</p>
 
